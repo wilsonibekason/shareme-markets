@@ -219,7 +219,7 @@ const PinDetail = ({ user }) => {
             </div>
           </div>
         </div>
-      )}
+      )} 
 
       {!pins?.length && (
         <h2 className="text-center font-bold text-2xl mt-8 mb-4">

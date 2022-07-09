@@ -138,7 +138,7 @@ const Pin = ({ pin, onScroll }) => {
                   rel="noreferrer"
                 >
                   {"  "}
-                  <BsFillArrowUpRightCircleFill />
+                  <BsFillArrowUpRighthCircleFill />
                   {destination?.slice(0, 6)}...
                 </a>
               ) : (
@@ -154,7 +154,7 @@ const Pin = ({ pin, onScroll }) => {
                   }}
                 >
                   <AiTwotoneDelete />
-                </button>
+                </button> 
               )}
             </div>
           </div>
