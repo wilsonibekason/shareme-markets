@@ -139,8 +139,8 @@ function SignIn() {
                   <div className="flex flex-wrap -mx-3">
                     <div className="w-full px-3">
                       <GoogleLogin
-                        clientId={`${process.env.WEB2_CLOUD_PUBLIC_API}`}
-                        //clientId="843975118254-pqumnmmant7vg9d1o4qgv7boc3bfth3g.apps.googleusercontent.com"
+                      //  clientId={`${process.env.WEB2_CLOUD_PUBLIC_API}`}
+                        clientId="843975118254-pqumnmmant7vg9d1o4qgv7boc3bfth3g.apps.googleusercontent.com"
                         render={(renderProps) => (
                           <button
                             className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center"
