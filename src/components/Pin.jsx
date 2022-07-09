@@ -138,7 +138,7 @@ const Pin = ({ pin, onScroll }) => {
                   rel="noreferrer"
                 >
                   {"  "}
-                  <BsFillArrowUpRighthCircleFill />
+                  <BsFillArrowUpRightCircleFill />
                   {destination?.slice(0, 6)}...
                 </a>
               ) : (

@@ -7,9 +7,9 @@ export const client = sanityClient({
   dataset: "production",
   apiVersion: "2021-11-16",
   useCdn: true,
-  token: process.env.WEB2_CLOUD_SANITY_API_KEY,
-  //token:
-    //"skPE4rqlby0lPJ7iqWlYvN9qg1iqELAhSFZVY11BD5gxGOvew1vp7Vb1Bs2c9nSBwNMLCMdBbEkS4Rq2r5YxhK9BLA4wMcrLv24kupfyOUqXVoyhmYLbBNNdmF7QYJffXtG1Y5k4UdRl5UwxRJZ6cpW5yjGracx1dVvvBq0oSfpanYPVlyuu",
+  //token: process.env.WEB2_CLOUD_SANITY_API_KEY,
+  token:
+    "skjyHyGco1OeGnTocv5jhiYGq8RCEIlRdzQ4jhf0BNxCpI7h6uu0ZvmmAMxqbBzj23G728LFPPz3pyc5vsQmvIHRfEoAw4B8CFusaQ2CXUF9kFEQHefN2hgcSph4cmvIqqdiPJ9BCK7ayEvSyw5AKjdJwxeC4fRUZLnLuDVtcOUwuj33qbd4",
 });
 
 const builder = imageUrlBuilder(client);
