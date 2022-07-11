@@ -34,7 +34,12 @@ function Features() {
         <div className="pt-12 md:pt-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Explore the solutions</h1>
+            <h1 className="h2 mb-4">
+              Explore the{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-gray-400">
+                Shareme
+              </span>
+            </h1>
             <p className="text-xl text-gray-600">
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
