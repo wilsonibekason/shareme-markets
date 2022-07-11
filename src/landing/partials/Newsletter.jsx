@@ -98,7 +98,7 @@ function Newsletter() {
               {/* CTA content */}
               <div className="text-center lg:text-left lg:max-w-xl">
                 <h3 className="h3 text-white mb-2">
-                  Nothing Ever Comes Real Until it is experienced
+                  Nothing is Real Until it is experienced
                 </h3>
                 <p className="text-gray-300 text-lg mb-6">
                   Send us your mail to get the most from us
