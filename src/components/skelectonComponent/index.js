@@ -1,1 +1,1 @@
-export { default as HomePinSkeletonLoader } from "./SkelectonLoader";
+export { default as HomePinSkeletonLoader } from "./SkeletonLoader";
