@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import LogoSvg from "../../assets/logo.png";
 
 function Header() {
   const [top, setTop] = useState(true);
@@ -24,8 +25,9 @@ function Header() {
           {/* Site branding */}
           <div className="flex-shrink-0 mr-4">
             {/* Logo */}
-            <Link to="/" className="block" aria-label="Cruip">
-              <svg
+            <Link to="/home" className="block" aria-label="Cruip">
+              <img src={LogoSvg} alt="logo-img" width={32} height={32} />
+              {/* <svg
                 className="w-8 h-8"
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +53,7 @@ function Header() {
                   fill="url(#header-logo)"
                   fillRule="nonzero"
                 />
-              </svg>
+              </svg> */}
             </Link>
           </div>
 
