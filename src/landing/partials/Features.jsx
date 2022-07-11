@@ -6,6 +6,18 @@ import FeaturesElement from "../images/features-element.png";
 
 function Features() {
   const [tab, setTab] = useState(1);
+  const sharemeValues = [
+    "See",
+    "Contribute",
+    "Fun",
+    "Experience",
+    "Privacy",
+    "Security",
+    "Popularity",
+    "Advertise",
+    "Learn",
+    "Research",
+  ];
 
   const tabs = useRef(null);
 
@@ -40,11 +52,7 @@ function Features() {
                 Shareme
               </span>
             </h1>
-            <p className="text-xl text-gray-600">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
-              cupidatat.
-            </p>
+            <p className="text-xl text-gray-600">Shareme</p>
           </div>
 
           {/* Section content */}
@@ -55,11 +63,16 @@ function Features() {
               data-aos="fade-right"
             >
               <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3">Powerful suite of tools</h3>
+                <h3 className="h3 mb-3">Explore Shareme</h3>
                 <p className="text-xl text-gray-600">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa.
+                  {sharemeValues.map((items, index) => (
+                    <span
+                      className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-gray-400"
+                      key={index + items}
+                    >
+                      {`${items}  `}
+                    </span>
+                  ))}
                 </p>
               </div>
               {/* Tabs buttons */}
