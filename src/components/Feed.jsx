@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "../client";
-import Spinner from "./Spinner";
-import UploaderSpinner from "./uploadLoader/UploaderSpinner";
+//import Spinner from "./Spinner";
+//import UploaderSpinner from "./uploadLoader/UploaderSpinner";
 import MasonaryLayout from "./MasonaryLayout";
 import { feedQuery, searchQuery } from "../utils/data";
 import { HomePinSkeletonLoader } from "./skelectonComponent";

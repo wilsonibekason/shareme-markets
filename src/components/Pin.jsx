@@ -100,6 +100,7 @@ const Pin = ({ pin, onScroll }) => {
                   download
                   onClick={(e) => {
                     e.stopPropagation();
+                    e.preventDefault();
                   }}
                   className="bg-white w-9 h-9 p-2 rounded-full flex items-center justify-center text-dark text-xl opacity-75 hover:opacity-100 hover:shadow-md outline-none"
                 >
@@ -155,7 +156,7 @@ const Pin = ({ pin, onScroll }) => {
                   }}
                 >
                   <AiTwotoneDelete />
-                </button> 
+                </button>
               )}
             </div>
           </div>
