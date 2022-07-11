@@ -49,7 +49,7 @@ function Testimonials() {
             </h2>
             <p className="text-xl text-gray-600" data-aos="zoom-y-out">
               <span
-                className={`${gradientReused} bg-gradient-to-l from-red-200 to-gray-200`}
+                className={`${gradientReused} bg-gradient-to-l from-gray-400 to-gray-800`}
               >
                 {" "}
                 Shareme
@@ -155,12 +155,12 @@ function Testimonials() {
                   We get nice comments all the time. “
                 </blockquote>
                 <cite className="block font-bold text-lg not-italic mb-1">
-                  Darya Finger
+                  James Ibekason
                 </cite>
                 <div className="text-gray-600">
                   <span>CEO & Co-Founder</span>{" "}
                   <a className="text-blue-600 hover:underline" href="#0">
-                    @Dropbox
+                    Jambekcom Solutions
                   </a>
                 </div>
               </div>
