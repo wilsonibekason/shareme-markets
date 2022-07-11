@@ -121,7 +121,8 @@ function SignIn() {
                 </div>
                 <form>
                   <div className="flex flex-wrap -mx-3 mb-3">
-                    <div className="w-full px-3">S
+                    <div className="w-full px-3">
+                      S
                       <button className="btn px-0 text-white bg-gray-900 hover:bg-gray-800 w-full relative flex items-center">
                         <svg
                           className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4"
@@ -139,7 +140,7 @@ function SignIn() {
                   <div className="flex flex-wrap -mx-3">
                     <div className="w-full px-3">
                       <GoogleLogin
-                      //  clientId={`${process.env.WEB2_CLOUD_PUBLIC_API}`}
+                        //  clientId={`${process.env.WEB2_CLOUD_PUBLIC_API}`}
                         clientId="843975118254-pqumnmmant7vg9d1o4qgv7boc3bfth3g.apps.googleusercontent.com"
                         render={(renderProps) => (
                           <button
