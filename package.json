@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
     "@craco/craco": "^6.4.3",
     "@material-tailwind/react": "^1.0.6",
     "@sanity/client": "^3.3.2",
+     "react-redux": "^8.0.2",
     "@sanity/image-url": "^1.0.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
