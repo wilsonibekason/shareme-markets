@@ -14,11 +14,11 @@ function FeaturesBlocks() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">How Simple works</h2>
+            <h2 className="h2 mb-4">What Are Waiting For </h2>
             <p className="text-xl text-gray-600">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
-              cupidatat.
+              Explore the Internet source of freely-useable images and short
+              videos around the world Powered by creators and users around the
+              globe
             </p>
           </div>
 
@@ -61,10 +61,10 @@ function FeaturesBlocks() {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                Initial Contact
+                Science
               </h4>
               <p className="text-gray-600 text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Access to all science photos of your choice
               </p>
             </div>
 
@@ -102,10 +102,10 @@ function FeaturesBlocks() {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                Discovery Session
+                Programming
               </h4>
               <p className="text-gray-600 text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Access programming shorts and images
               </p>
             </div>
 
@@ -136,10 +136,10 @@ function FeaturesBlocks() {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                Contracting
+                Arts
               </h4>
               <p className="text-gray-600 text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Have access to arts based images at a spot
               </p>
             </div>
 
@@ -183,10 +183,10 @@ function FeaturesBlocks() {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                Fast Prototyping
+                Wallpapers
               </h4>
               <p className="text-gray-600 text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Access explicit wallpapers of all kinds as well
               </p>
             </div>
 
@@ -217,10 +217,11 @@ function FeaturesBlocks() {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                Design Phase
+                Business
               </h4>
               <p className="text-gray-600 text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Access to business career experiences and shorts from wonderful
+                creators
               </p>
             </div>
 
@@ -260,10 +261,11 @@ function FeaturesBlocks() {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                Develop & Launch
+                Fashion And Entertainment
               </h4>
               <p className="text-gray-600 text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Access the globe that spans high art and popular culture which
+                is a signficant part of the material and visual culture
               </p>
             </div>
           </div>

@@ -26,7 +26,7 @@ function Header() {
           <div className="flex-shrink-0 mr-4">
             {/* Logo */}
             <Link to="/home" className="block" aria-label="Cruip">
-              <img src={LogoSvg} alt="logo-img" width={32} height={32} />
+              <img src={LogoSvg} alt="logo-img" width={'50%'} height={'50%'} />
               {/* <svg
                 className="w-8 h-8"
                 viewBox="0 0 32 32"
