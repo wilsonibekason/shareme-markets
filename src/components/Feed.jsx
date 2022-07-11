@@ -5,6 +5,7 @@ import Spinner from "./Spinner";
 import UploaderSpinner from "./uploadLoader/UploaderSpinner";
 import MasonaryLayout from "./MasonaryLayout";
 import { feedQuery, searchQuery } from "../utils/data";
+import HomePinSkeletonLoader from "./skeleton-loaders/HomePinLoader";
 
 const Feed = () => {
   const [loading, setLoading] = useState(false);
@@ -34,7 +35,7 @@ const Feed = () => {
     }
   }, [categoryId]);
   const ideaName = categoryId || "NEW";
-  if (loading) return <Spinner message="we are adding a new component" />;
+  if (loading) return <HomePinSkeletonLoader />;
   if (!pins?.length)
     return <h1 className="mt-10 text-center text-xl ">no pins available</h1>;
   return <div>{pins && <MasonaryLayout pins={pins} />}</div>;

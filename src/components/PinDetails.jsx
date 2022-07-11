@@ -172,13 +172,13 @@ const PinDetail = ({ user }) => {
                       <p>{item.comment}</p>
                     </div>
                     <div className="flex flex-end">
-                      <button
+                      <buttonz
                         type="button"
                         className="bg-red-500 text-white rounded-full px-2 py-1 font-semibold text-[0.8rem] outline-none"
                         onClick={addComment}
                       >
                         reply
-                      </button>
+                      </buttonz>
                     </div>
                   </div>
                 </>
@@ -193,15 +193,19 @@ const PinDetail = ({ user }) => {
                   alt="user-profile"
                 />
               </Link>
-
+              <input
+                className=" flex-1 w-12 border-gray-100 outline-none border-2 p-2 rounded-2xl focus:border-gray-300"
+                type="text"
+                placeholder="Add a comment"
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}
+              />
               <div className=" relative block">
                 <input
                   type="text"
                   id="search-navbar"
                   className="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Add a comment"
-                  value={comment}
-                  onChange={(e) => setComment(e.target.value)}
+                  placeholder="Search..."
                 />
               </div>
 
@@ -215,7 +219,7 @@ const PinDetail = ({ user }) => {
             </div>
           </div>
         </div>
-      )}
+      )} 
 
       {!pins?.length && (
         <h2 className="text-center font-bold text-2xl mt-8 mb-4">

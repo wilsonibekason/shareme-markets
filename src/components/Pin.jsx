@@ -99,7 +99,7 @@ const Pin = ({ pin, onScroll }) => {
                   href={`${image?.asset?.url}?dl=`}
                   download
                   onClick={(e) => {
-                    e.bstopPropagation();
+                    e.stopPropagation();
                   }}
                   className="bg-white w-9 h-9 p-2 rounded-full flex items-center justify-center text-dark text-xl opacity-75 hover:opacity-100 hover:shadow-md outline-none"
                 >
@@ -116,7 +116,7 @@ const Pin = ({ pin, onScroll }) => {
               ) : (
                 <button
                   type="button"
-                  className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none"
+                  className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-sm rounded-3xl hover:shadow-md outline-none"
                   onClick={(e) => {
                     e.stopPropagation();
                     e.preventDefault();
@@ -150,6 +150,7 @@ const Pin = ({ pin, onScroll }) => {
                   type="button"
                   onClick={(e) => {
                     e.stopPropagation();
+                    e.preventDefault();
                     deletePin(_id);
                   }}
                 >
