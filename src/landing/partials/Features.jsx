@@ -122,11 +122,12 @@ function Features() {
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">
-                      Building the Simple ecosystem
+                      Generate Photos and Sell them with crypto or Stripe
                     </div>
                     <div className="text-gray-600">
-                      Take collaboration to the next level with security and
-                      administrative features built for teams.
+                      Take your profiles to the next level level by uptimizing
+                      your cashflow quadrant And Retrieving quality and
+                      standardized photos
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
@@ -156,11 +157,12 @@ function Features() {
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">
-                      Building the Simple ecosystem
+                      Create Well Optimized Short Videos
                     </div>
                     <div className="text-gray-600">
-                      Take collaboration to the next level with security and
-                      administrative features built for teams.
+                      Take your business and videos to the next level by
+                      creating well optimized, less catched and minimal bases
+                      duration short videos
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
