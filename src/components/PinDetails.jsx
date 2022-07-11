@@ -152,7 +152,7 @@ const PinDetail = ({ user }) => {
               />
               <p className="font-bold">{pinDetail?.postedBy.userName}</p>
             </Link>
-            <h2 className="mt-5 text-[23px] text-center  sm:text-[5px] font-black">
+            <h2 className="mt-5 text-[23px] text-center  sm:text-[5px] lg:text-[2rem]  font-black">
               Comments
             </h2>
             <div className="max-h-370 overflow-y-tauto">
