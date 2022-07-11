@@ -97,10 +97,11 @@ function Newsletter() {
             <div className="relative flex flex-col lg:flex-row justify-between items-center">
               {/* CTA content */}
               <div className="text-center lg:text-left lg:max-w-xl">
-                <h3 className="h3 text-white mb-2">Powering your business</h3>
+                <h3 className="h3 text-white mb-2">
+                  Nothing Ever Comes Real Until it is experienced
+                </h3>
                 <p className="text-gray-300 text-lg mb-6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit nemo
-                  expedita voluptas culpa sapiente.
+                  Send us your mail to get the most from us
                 </p>
 
                 {/* CTA form */}
@@ -121,9 +122,9 @@ function Newsletter() {
                   </div>
                   {/* Success message */}
                   {/* <p className="text-sm text-gray-400 mt-3">Thanks for subscribing!</p> */}
-                  <p className="text-sm text-gray-400 mt-3">
+                  {/* <p className="text-sm text-gray-400 mt-3">
                     7 days free trial. No credit card required.
-                  </p>
+                  </p> */}
                 </form>
               </div>
             </div>
