@@ -5,7 +5,7 @@ import Spinner from "./Spinner";
 import UploaderSpinner from "./uploadLoader/UploaderSpinner";
 import MasonaryLayout from "./MasonaryLayout";
 import { feedQuery, searchQuery } from "../utils/data";
-import HomePinSkeletonLoader from "./skeleton-loaders/HomePinLoader";
+import { HomePinSkeletonLoader } from "./skelectonComponent";
 
 const Feed = () => {
   const [loading, setLoading] = useState(false);
@@ -15,13 +15,18 @@ const Feed = () => {
   useEffect(() => {
     if (categoryId) {
       setLoading(true);
+
       const query = searchQuery(categoryId);
       client.fetch(query).then((data) => {
         console.log("====================================");
         console.log(data);
         console.log("====================================");
-        setPins(data);
+        const timer = setTimeout(() => {
+          setPins(data);
+        }, 5000);
+        // cancle the timer while unmounting
         setLoading(false);
+        return () => clearTimeout(timer);
       });
     } else {
       setLoading(true);
@@ -29,8 +34,12 @@ const Feed = () => {
         console.log("====================================");
         console.log(data);
         console.log("====================================");
-        setPins(data);
+        const timer = setTimeout(() => {
+          setPins(data);
+        }, 5000);
+        // cancle the timer while unmounting
         setLoading(false);
+        return () => clearTimeout(timer);
       });
     }
   }, [categoryId]);
