@@ -7,21 +7,7 @@ import { client } from "../client";
 import Logo from "../assets/logo.png";
 import { userQuery } from "../utils/data";
 import Pins from "./Pins";
-{
-  /* <div className="  fixed w-4/5 bg-white h-full overflow-y-auto shadow-md z-index-10 animate-slide-10">
-            <div
-              className="absolute w-full 
-            flex justify-end items-center p-2"
-            >
-              <AiFillCloseCircle
-                fontSize={20}
-                className="cursor-pointer"
-                onClick={() => setToggleSidebar(false)}
-              />
-            </div>
-            <Sidebar user={user && user} closeToggle={setToggleSidebar} />
-          </div> */
-}
+
 const Home = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
   const [user, setUser] = useState(null);
@@ -61,7 +47,21 @@ const Home = () => {
             <img src={user?.image} alt="logo" className="w-10" />
           </Link>
         </div>
-        {toggleSidebar && <SidebarMobile />}
+        {toggleSidebar && (
+          <div className="  fixed w-4/5 bg-white h-full overflow-y-auto shadow-md z-index-10 animate-slide-10">
+            <div
+              className="absolute w-full 
+                      flex justify-end items-center p-2"
+            >
+              <AiFillCloseCircle
+                fontSize={20}
+                className="cursor-pointer"
+                onClick={() => setToggleSidebar(false)}
+              />
+            </div>
+            <Sidebar user={user && user} closeToggle={setToggleSidebar} />
+          </div>
+        )}
       </div>
 
       <div className="pb-2 flex-1 h-screen overflow-y-scroll" ref={scrollRef}>

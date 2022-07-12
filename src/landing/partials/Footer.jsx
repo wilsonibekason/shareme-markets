@@ -304,9 +304,9 @@ function Footer() {
             Made by{" "}
             <a
               className="text-blue-600 hover:underline"
-              href="https://cruip.com/"
+              href="https://wilsonibekason.com/"
             >
-              Cruip
+              wilsonibekason
             </a>
             . All rights reserved.
           </div>
