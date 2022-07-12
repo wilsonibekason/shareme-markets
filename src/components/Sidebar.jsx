@@ -9,13 +9,14 @@ const isNotActiveStyle =
   "flex items-center px-5 gap-3 text-grey-500 hover:text-black transition-all duration-200 ease-in-out capitalize";
 const isActiveStyle =
   "flex items-center px-5 gap-3 font-extrebold border-r-2 border-black hover:text-black transition-all duration-200 ease-in-out capitalize";
+const unIdentified = " hide-scrollbar";
 
 const Sidebar = ({ closeToggle, user }) => {
   const handleCloseSidebar = () => {
     if (closeToggle) closeToggle(false);
   };
   return (
-    <div className="flex flex-col justify-between h-full bg-white overflow-y-scrikk min-w-210 hide-scrollbar">
+    <div className="flex flex-col justify-between h-full bg-white overflow-y-scroll min-w-210">
       <div className="flex flex-col">
         <Link
           to="/"
@@ -32,6 +33,8 @@ const Sidebar = ({ closeToggle, user }) => {
             }
             onClick={handleCloseSidebar}
           >
+            {" "}
+            disp ailo
             <RiHomeFill />
             Home
           </NavLink>

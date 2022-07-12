@@ -60,7 +60,7 @@ const Pin = ({ pin, onScroll }) => {
         ])
         .commit()
         .then(() => {
-          window.location.reload();
+          // window.location.reload();
           setSavingPost(true);
         });
     }
