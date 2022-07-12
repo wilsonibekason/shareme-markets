@@ -38,8 +38,8 @@ function SignIn() {
             <div className="pt-32 pb-12 md:pt-40 md:pb-20">
               {/* Page header */}
               <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-                <h1 className="h1">
-                  Welcome back. We exist to make entrepreneurism easier.
+                <h1 className="h1 sm:h5 md:h3">
+                  Start your journey by logging into Shareme.
                 </h1>
               </div>
 
