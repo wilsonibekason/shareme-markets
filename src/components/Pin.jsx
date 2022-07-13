@@ -26,10 +26,9 @@ const Pin = ({ pin, onScroll }) => {
     });
   };
 
-  // onstate onresume set Saving Post
+  // onstate onresume set Saving Pobst
   const savePost = () => {
-    setSavingPost(true);
-    if(savingPost) return 'saving'
+    if(savingPost) {return 'saving'}
     else{
       return 'saved';
     }
