@@ -1,4 +1,4 @@
-export {createApi, fetchBaseQuery } from '@reduxjs/toolkit';
+export {createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export {setCredentials, logOut} from '../../feature/auth/authSlice'
 
 const baseQuery = fetchBaseQuery({
