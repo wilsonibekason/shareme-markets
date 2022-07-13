@@ -19,7 +19,7 @@ const Pin = ({ pin, onScroll }) => {
       ? JSON.parse(localStorage.getItem("user"))
       : localStorage.clear();
 
-  // deleting a pin
+  // deleting a pin 
   const deletePin = (id) => {
     client.delete(id).then(() => {
       window.location.reload();
