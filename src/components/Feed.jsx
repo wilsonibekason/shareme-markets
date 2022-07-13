@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "../client";
-//import Spinner from "./Spinner";
+import Spinner from "./Spinner";
 //import UploaderSpinner from "./uploadLoader/UploaderSpinner";
 import MasonaryLayout from "./MasonaryLayout";
 import { feedQuery, searchQuery } from "../utils/data";
@@ -44,7 +44,7 @@ const Feed = () => {
     }
   }, [categoryId]);
   const ideaName = categoryId || "NEW";
-  if (loading) return <HomePinSkeletonLoader />;
+  if (loading) return <Spinner />;
   if (!pins?.length)
     return <h1 className="mt-10 text-center text-xl ">no pins available</h1>;
   return <div>{pins && <MasonaryLayout pins={pins} />}</div>;

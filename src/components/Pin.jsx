@@ -19,13 +19,23 @@ const Pin = ({ pin, onScroll }) => {
       ? JSON.parse(localStorage.getItem("user"))
       : localStorage.clear();
 
-  // deleting a pin
+  // deleting a pin 
   const deletePin = (id) => {
     client.delete(id).then(() => {
       window.location.reload();
     });
   };
 
+  // onstate onresume set Saving Post
+  const savePost = () => {
+    setSavingPost(true);
+    if(savingPost) return 'saving'
+    else{
+      return 'saved';
+    }
+  }
+  // return saving function to variable
+  const isSavingPost = savePost();
   // console.log("====================================");
   // console.log(postedBy);
   // console.log(postedBy?._id);
@@ -125,7 +135,7 @@ const Pin = ({ pin, onScroll }) => {
                   }}
                 >
                   {pin?.save?.length}
-                  {savingPost ? "Saving" : "Save"}
+                  {savingPost ? isSavingPost : "Save"}
                 </button>
               )}
             </div>
