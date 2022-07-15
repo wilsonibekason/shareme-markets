@@ -7,7 +7,7 @@ export const store = configureStore({
         // ...authReducer,
         // auth: {
         //     ...authReducer.auth,
-        // }
+        // } 
         [apiSlice.reducerPath]: apiSlice.reducer,
         auth: authReducer,
 
