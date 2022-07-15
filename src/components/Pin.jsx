@@ -181,9 +181,9 @@ const Pin = ({ pin, onScroll }) => {
         <img
           src={postedBy?.image}
           alt="postedBy_image"
-          className="w-5 h-5  rounded-full object-cover"
+          className="w-2.5 h-2.5 md:w-4 md:h-4 lg:w-5 lg:h-5  rounded-full object-cover"
         />
-        <p className="font-semibold capitalize text-sm sm:inline">
+        <p className="font-semibold capitalize text-[.5rem] sm:text-[.5rem] sm:inline">
           {userProfileName?.length > 18
             ? userProfileName.slice(0, 17) + "..."
             : userProfileName}
