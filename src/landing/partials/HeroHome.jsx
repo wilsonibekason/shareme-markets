@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "../utils/Modal";
 
 import HeroImage from "../images/hero-image.png";
+import { Link } from "react-router-dom";
 
 function HeroHome() {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
@@ -67,12 +68,13 @@ function HeroHome() {
                 data-aos-delay="300"
               >
                 <div>
-                  <a
+                  <Link
+                    to="/signin"
                     className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0"
                     href="#0"
                   >
-                    Start free trial
-                  </a>
+                    Get Started
+                  </Link>
                 </div>
                 <div>
                   <a
