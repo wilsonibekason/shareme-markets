@@ -1,10 +1,10 @@
-export {createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-export {setCredentials, logOut} from '../../feature/auth/authSlice'
-
+import {createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import {setCredentials, logOut} from '../../feature/auth/authSlice'
+  
 const baseQuery = fetchBaseQuery({
     baseUrl: 'backendURL',
     credentials: 'include',
-    prepareHeader: (headers, {getState}) => {
+    prepareHeaders: (headers, { getState }) => {
         const token = getState().auth.token
         if(token) {
             headers.set('authorization', `Bearer ${token}`)
@@ -14,7 +14,7 @@ const baseQuery = fetchBaseQuery({
 })
 
 // create wrapper for baseQuery
-const baseQuerywithReAuth = async (args, api, extraOptions) => {
+const baseQueryWithReauth = async (args, api, extraOptions) => {
     let result  = await baseQuery(args, api, extraOptions)
     // optional chaining
     if(result?.error?.originalStatus === 403){
@@ -25,17 +25,18 @@ const baseQuerywithReAuth = async (args, api, extraOptions) => {
     if(refreshResults?.data) {
        const user = api.getState().auth.user
        // store the API token here 
-       api.dispatch(setCredentials({...refreshResults?.data, user}));
+       api.dispatch(setCredentials({...refreshResults?.data, user}))
        // retry the original query with new access token
        result = await baseQuery(args, api, extraOptions)
     }  else{
-      api.dispatch(logOut);
+      api.dispatch(logOut());
     }
   }
   return result;
 }
 // exporting the apiSlice
-export  const apiSlice = createApi({
-  baseQuery: baseQueryWithResults,
-  endPoints: builder => ({})
+export const apiSlice = createApi({
+  baseQuery: baseQueryWithReauth,
+  endpoints: builder => ({})
 })
+
