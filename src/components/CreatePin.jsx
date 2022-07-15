@@ -19,7 +19,7 @@ const CreatePin = ({ user }) => {
   const [loading, setLoading] = useState(false);
   const [uploadLoading, setUploadLoading] = useState(false);
   const [destination, setDestination] = useState();
-}
+
   const [fields, setFields] = useState();
   const [category, setCategory] = useState();
   const [imageAsset, setImageAsset] = useState();
