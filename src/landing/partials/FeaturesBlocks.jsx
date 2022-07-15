@@ -14,7 +14,7 @@ function FeaturesBlocks() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">What Are Waiting For </h2>
+            <h2 className="h2 mb-4 sm:h5">What Are You Waiting For </h2>
             <p className="text-xl text-gray-600">
               Explore the Internet source of freely-useable images and short
               videos around the world Powered by creators and users around the

@@ -67,7 +67,7 @@ function Features() {
                 <p className="text-xl text-gray-600">
                   {sharemeValues.map((items, index) => (
                     <span
-                      className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-gray-400"
+                      className="bg-clip-text"
                       key={index + items}
                     >
                       {`${items}  `}
