@@ -53,7 +53,7 @@ const Pin = ({ pin, onScroll }) => {
 
   const savePin = (id) => {
     if (alreadySaved?.length === 0) {
-      setSavingPost(true);
+      setSavingPost(true);B
       client
         .patch(id)
         .setIfMissing({ save: [] })
