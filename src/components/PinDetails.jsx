@@ -126,20 +126,20 @@ const PinDetail = ({ user }) => {
                 <a
                   href={`${pinDetail.image.asset.url}?dl=`}
                   download
-                  className="bg-secondaryColor p-2 text-xl rounded-full flex items-center justify-center text-dark opacity-75 hover:opacity-100"
+                  className="bg-secondaryColor p-2 text-xl rounded-full flex items-center justify-center text-dark opacity-75 hover:opacity-100 w-4 h-4 lg:w-10 lg:h-10 md:w-8 md:h-8 "
                 >
                   <MdDownloadForOffline />
                 </a>
               </div>
-              <a href={pinDetail.destination} target="_blank" rel="noreferrer">
+              <a className="text-[10px]"href={pinDetail.destination} target="_blank" rel="noreferrer">
                 {`${pinDetail.destination?.slice(0, 20)} ....`}
               </a>
             </div>
             <div>
-              <h1 className="text-4xl font-bold break-words mt-3">
+              <h1 className="lg:text-4xl text-sm md:text-xl font-bold break-words mt-3">
                 {pinDetail.title}
               </h1>
-              <p className="mt-3">{pinDetail.about}</p>
+              <p className="mt-3 text-[13px] lg:text-[1rem] md:text-[0.9rem]">{pinDetail.about}</p>
             </div>
             <Link
               to={`/user-profile/${pinDetail?.postedBy._id}`}
@@ -147,12 +147,12 @@ const PinDetail = ({ user }) => {
             >
               <img
                 src={pinDetail?.postedBy.image}
-                className="w-5 h-5 lg:w-10 lg:h-10 md:w-8 md:h-8 rounded-full"
+                className="w-4 h-4 lg:w-10 lg:h-10 md:w-8 md:h-8 rounded-full"
                 alt="user-profile"
               />
-              <p className="font-bold">{pinDetail?.postedBy.userName}</p>
+              <p className="font-bold text-[12px] lg:text-sm">{pinDetail?.postedBy.userName}</p>
             </Link>
-            <h2 className="mt-5 text-[23px] text-center  sm:text-[5px] lg:text-[2rem]  font-black">
+            <h2 className="mt-5 text-[15px] text-center   lg:text-[2rem]  font-black">
               Comments
             </h2>
             <div className="max-h-370 overflow-y-tauto">
@@ -185,11 +185,11 @@ const PinDetail = ({ user }) => {
               ))}
             </div>
             {/**<Modal />**/}
-            <div className="flex flex-wrap mt-6 gap-3">
+            {/* <div className="flex flex-wrap mt-6 gap-3">
               <Link to={`/user-profile/${user?._id}`}>
                 <img
                   src={user?.image}
-                  className="w-10 h-10 md:w-10 md:h-10 lg:w-10 lg:h-10 rounded-full cursor-pointer"
+                  className="w-4 h-4 lg:w-10 lg:h-10 md:w-8 md:h-8 rounded-full cursor-pointer"
                   alt="user-profile"
                 />
               </Link>
@@ -198,7 +198,7 @@ const PinDetail = ({ user }) => {
                 <input
                   type="text"
                   id="search-navbar"
-                  className="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block p-2 pl-10 w-[80%] text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Add a comment"
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
@@ -207,11 +207,45 @@ const PinDetail = ({ user }) => {
 
               <button
                 type="button"
-                className="bg-red-500 text-white rounded-full px-2 py-2 lg:px-4 lg:py-2  font-semibold text-[15px] outline-none"
+                className="bg-red-500 text-white rounded-full px-4 py-2 lg:px-4 lg:py-2  font-semibold text-[15px] outline-none"
                 onClick={addComment}
               >
                 {addingComment ? "Sending..." : "send"}
               </button>
+            </div> */}
+
+            <div className="max-w-lg rounded-lg shadow-blue-50">
+               <form action="" className="w-full p-4">
+                <div className="mb-2">
+                <div className="flex flex-wrap mt-[2rem] gap-3 items-center">
+                <Link to={`/user-profile/${user?._id}`}>
+                <img
+                  src={user?.image}
+                  className="w-5 h-5 lg:w-10 lg:h-10 md:w-6 md:h-6 rounded-full cursor-pointer"
+                  alt="user-profile"
+                />
+              </Link>
+                <label htmlFor="comment" className="text-lg text-gray-900">
+                  Add a comment
+                </label>
+                </div>
+                
+                <textarea name="comments" id="400" cols="30" rows="10" 
+                className="w-full h-20 p-2 border rounded focus:outline-none focus:ring-gray-50 focus:ring-1"
+                ></textarea> 
+                </div>
+                <div>
+                  <button 
+                  className="bg-red-500 text-white rounded-full px-2.5 py-1.5 lg:px-4 lg:py-2  text-[15px] outline-none"
+                  onClick={addComment}
+                  >
+                    {addingComment ? "sending..." : "send"}
+                  </button>
+                  <button className='mx-1 bg-red-500 text-white rounded-full px-2.5 py-1.5 lg:px-4 lg:py-2  text-[15px] outline-none'>
+                    cancel
+                  </button>
+                </div>
+               </form>
             </div>
           </div>
         </div>
@@ -224,7 +258,7 @@ const PinDetail = ({ user }) => {
         </h2>
       )}
       {pins?.length > 0 && (
-        <h2 className="text-center font-bold text-2xl mt-8 mb-4">
+        <h2 className="text-center font-bold text-sm lg:text-2xl md:text-xl mt-8 mb-4">
           More like this
         </h2>
       )}
