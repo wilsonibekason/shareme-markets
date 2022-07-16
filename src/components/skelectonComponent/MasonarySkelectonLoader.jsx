@@ -13,12 +13,12 @@ const breakpointColumnsObj = {
     300: 1,
   };
  // loader number
- let COUNTER = 20;
+ let COUNTER = 12;
 const MasonarySkelectonLoader = () => {
-    let pinsLoaded = Array(COUNTER).fill(<HomePinSkeletonLoader className="w-max"/>)
+    let pinsLoaded = Array(COUNTER).fill(<HomePinSkeletonLoader className="" />)
   return (
     <Masonry 
-     className='flex animate-slide-fwd'
+     className='flex animate-slide-fwd space-x-5'
      breakpointCols={breakpointColumnsObj}
     >
 {pinsLoaded}
