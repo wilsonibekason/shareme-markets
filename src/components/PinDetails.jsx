@@ -128,7 +128,7 @@ const PinDetail = ({ user }) => {
                   download
                   className="bg-secondaryColor p-2 text-xl rounded-full flex items-center justify-center text-dark opacity-75 hover:opacity-100 w-5 h-5 lg:w-10 lg:h-10 md:w-8 md:h-8 "
                 >
-                  <MdDownloadForOffline />
+                  <MdDownloadForOffline fontSize={25}/>
                 </a>
               </div>
               <a className="text-[15px] md:text-[20px] lg:text-lg"href={pinDetail.destination} target="_blank" rel="noreferrer">
