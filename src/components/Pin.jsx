@@ -62,7 +62,7 @@ const Pin = ({ pin, onScroll }) => {
             _key: uuidv4,
             userId: user?.googleId,
             postedBy: {
-              _type: "postedBy",
+              _type: "postedBy", 
               _ref: user?.googleId,
             },
           },
