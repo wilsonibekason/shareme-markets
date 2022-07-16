@@ -12,6 +12,7 @@ import UploadSpinner from "./uploadLoader/UploaderSpinner";
 /// local variables
 let loadedButtonSty =
   "text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2";
+  const loadButtonSty = 'bg-red-500 text-white font-bold p-1 lg:p-2 rounded-full w-[5rem] lg:w-28 outline-none';
 
 const CreatePin = ({ user }) => {
   const [title, setTitle] = useState("");
@@ -118,7 +119,7 @@ const CreatePin = ({ user }) => {
                       <p className="text-lg">Click to upload</p>
                     </div>
 
-                    <p className="mt-32 text-gray-400">
+                    <p className="mt-32 text-gray-400 text-sm">
                       Recommendation: Use high-quality JPG, JPEG, SVG, PNG, GIF
                       or TIFF less than 20MB
                     </p>
@@ -207,7 +208,7 @@ const CreatePin = ({ user }) => {
                 </select>
               </div>
               <div className="flex justify-end items-end mt-5">
-                {uploadLoading ? (
+                {!uploadLoading ? (
                   <button className={`${loadedButtonSty} `}>
                     <svg
                       class="animate-spin rounded-full w-4 h-4 mr-2 -ml-1 border-b-2 border-gray-900"
@@ -219,7 +220,7 @@ const CreatePin = ({ user }) => {
                   <button
                     type="button"
                     onClick={savePin}
-                    className="bg-red-500 text-white font-bold p-2 rounded-full w-28 outline-none"
+                    className="bg-red-500 text-white font-bold p-1 lg:p-2 rounded-full w-[5rem] lg:w-28 outline-none"
                   >
                     Save Pin
                   </button>

@@ -174,7 +174,7 @@ const PinDetail = ({ user }) => {
                     <div className="flex flex-end">
                       <button
                         type="button"
-                        className="bg-red-500 text-white rounded-full px-2 py-1 font-semibold text-[0.8rem] outline-none"
+                        className="bg-blackOverlay text-white rounded-full px-1 py-[.2rem] lg:px-2 lg:py-1 font-semibold text-[0.3rem] lg:text-[0.8rem] outline-none"
                         onClick={addComment}
                       >
                         reply
