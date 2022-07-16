@@ -152,7 +152,7 @@ const PinDetail = ({ user }) => {
               />
               <p className="font-bold text-[12px] lg:text-sm">{pinDetail?.postedBy.userName}</p>
             </Link>
-            <h2 className="mt-5 text-[15px] text-center   lg:text-[2rem]  font-black">
+            <h2 className="mt-5 text-[15px] text-center   lg:text-[2rem]  font-black">B
               Comments
             </h2>
             <div className="max-h-370 overflow-y-tauto">
@@ -236,7 +236,7 @@ const PinDetail = ({ user }) => {
                 cols="30" 
                 rows="10" 
                 placeholder="Add a comment"
-                className="w-full h-20 p-2 border rounded focus:outline-none focus:ring-gray-50 focus:ring-1"
+                className="w-full h-20 p-2 border rounded focus:outline-none focus:ring-gray-50 focus:ring-1 placeholder-"
                 value={comment}
                   onChange={(e) => setComment(e.target.value)}
                 />
