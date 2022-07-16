@@ -164,12 +164,12 @@ const PinDetail = ({ user }) => {
                   >
                     <img
                       src={item.postedBy?.image}
-                      className="w-10 h-10 rounded-full cursor-pointer"
+                      className="w-4 h-4 rounded-full cursor-pointer"
                       alt="user-profile"
                     />
                     <div className="flex flex-col">
-                      <p className="font-bold">{item.postedBy?.userName}</p>
-                      <p>{item.comment}</p>
+                      <p className="font-bold text-[.5rem] lg:text-lg">{item.postedBy?.userName}</p>
+                      <p className='font-bold text-[.5rem]'>{item.comment}</p>
                     </div>
                     <div className="flex flex-end">
                       <button
