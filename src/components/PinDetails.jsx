@@ -245,7 +245,7 @@ const PinDetail = ({ user }) => {
                             
                   <button
                 type="button"
-                className="bg-red-500 text-white rounded-full px-2 py-1.2 lg:px-4 lg:py-2  text-[10px] backdrop:lg:text-[15px] outline-none"
+                className="bg-red-500 text-white rounded-full px-2 py-1.5 lg:px-4 lg:py-2  text-[10px] backdrop:lg:text-[15px] outline-none"
                 onClick={addComment}
               >
                 {addingComment ? "sending..." : "send"}

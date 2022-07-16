@@ -7,6 +7,7 @@ import { client } from "../client";
 import Logo from "../assets/logo.png";
 import { userQuery } from "../utils/data";
 import Pins from "./Pins";
+import Footer from "../landing/partials/Footer";
 
 const Home = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
@@ -29,6 +30,7 @@ const Home = () => {
   }, []);
 
   return (
+    <>
     <div className="flex bg-grey-50 md:flex-row flex-col h-screen transition-height duration-75 ease-out">
       <div className="hidden sm:flex h-screen">
         <Sidebar user={user && user} closeToggle={setToggleSidebar} />
@@ -73,7 +75,14 @@ const Home = () => {
           <Route path="/*" element={<Pins user={user && user} />} />
         </Routes>
       </div>
+      
     </div>
+    <div>
+        {/*  Site footer */}
+      <Footer />
+
+      </div>
+    </>
   );
 };
 
