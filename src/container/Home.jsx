@@ -36,15 +36,15 @@ const Home = () => {
       <div className="flex md:hidden flex-row">
         <div className="p-2 w-full h-auto flex flex-row justify-between items-center shadow-md">
           <HiMenu
-            fontSize={35}
+            fontSize={30}
             className="cursor-pointer"
             onClick={() => setToggleSidebar(true)}
           />
           <Link to={"/"}>
-            <img src={Logo} alt="logo" className="w-28" />
+            <img src={Logo} alt="logo" className="w-[5rem] lg:w-28" />
           </Link>
           <Link to={`user-profile/${user?._id}`}>
-            <img src={user?.image} alt="logo" className="w-10" />
+            <img src={user?.image} alt="logo" className="w-5 lg:w-10 rounded-full" />
           </Link>
         </div>
         {toggleSidebar && (
