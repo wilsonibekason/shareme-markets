@@ -47,7 +47,7 @@ function HeroHome() {
           <div className="text-center pb-12 md:pb-16">
             <h1
               className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
-              data-aos="zoom-y-out"
+              data-aos="zoom-y-out text-sm"
             >
               Photo Sharing Made{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
