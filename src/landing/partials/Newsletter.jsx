@@ -97,11 +97,11 @@ function Newsletter() {
             <div className="relative flex flex-col lg:flex-row justify-between items-center">
               {/* CTA content */}
               <div className="text-center lg:text-left lg:max-w-xl">
-                <h3 className="h3 text-white mb-2">
-                  Nothing is Real Until it is experienced
+                <h3 className="text-sm lg:text-lg text-white mb-2">
+                  Nothing is Real until it is experienced
                 </h3>
-                <p className="text-gray-300 text-lg mb-6">
-                  Send us your mail to get the most from us
+                <p className="text-gray-300 text-sm lg:text-lg mb-6">
+                  Send us your email to get the most from us
                 </p>
 
                 {/* CTA form */}
@@ -109,12 +109,12 @@ function Newsletter() {
                   <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
                     <input
                       type="email"
-                      className="form-input w-full appearance-none bg-gray-800 border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500"
+                      className="form-input w-full appearance-none bg-gray-800 border border-gray-700 focus:border-gray-600 px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500 rounded-full "
                       placeholder="Your email…"
                       aria-label="Your email…"
                     />
                     <a
-                      className="btn text-white bg-blue-600 hover:bg-blue-700 shadow"
+                      className="btn text-white bg-blue-600 hover:bg-blue-700 shadow rounded-full text-sm lg:text-lg "
                       href="#0"
                     >
                       Subscribe
