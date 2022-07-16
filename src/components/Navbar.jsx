@@ -19,7 +19,7 @@ const Navbar = ({ searchTerm, setSearchTerm, user }) => {
             placeholder="Search"
             value={searchTerm}
             onFocus={() => navigate("/search")}
-            className="p-2 w-full bg-white outline-none"
+            className="p-[.2rem] lg:p-2 w-full bg-white outline-none"
           />
         </div>
         <div className="flex gap-3 ">
@@ -32,9 +32,9 @@ const Navbar = ({ searchTerm, setSearchTerm, user }) => {
           </Link>
           <Link
             to="/create-pin"
-            className="bg-white text-black rounded-full w-12 h-12 md:w-14 md:h-12 flex justify-center items-center shadow-lg"
+            className="bg-white text-black rounded-full w-7 h-7 lg:w-12 lg:h-12 md:w-14 md:h-12 flex justify-center items-center shadow-lg"
           >
-            <IoMdAdd fontSize={40} />
+            <IoMdAdd fontSize={25} />
           </Link>
         </div>
       </div>
