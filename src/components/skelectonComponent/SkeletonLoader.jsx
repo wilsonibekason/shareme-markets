@@ -20,11 +20,11 @@ const HomePinSkeletonLoader = () => {
     </div>
   </div>
 </div>
-<div className="shadow rounded-md px-2 py-1 max-w-lg w-full h-[4%] lg:h-[8%] my-5 file:mr-3 ml-3">
+<div className="shadow rounded-md px-2 py-1 max-w-lg w-full h-[2.5%] lg:h-[8%] my-5 file:mr-3 ml-3">
 <div className="animate-pulse flex space-x-4">
-    <div className="rounded-full bg-slate-200 h-6 w-6"></div>
+    <div className="rounded-full bg-slate-200 w-2.5 h-2.5 md:w-4 md:h-4 lg:w-4 lg:h-4 "></div>
     <div className="flex-1 space-y-6 py-1">
-      <div className="h-2 bg-slate-200 rounded"></div>
+      <div className=" h-1 lg:h-2 bg-slate-200 rounded"></div>
       </div>
     </div>
 </div>
