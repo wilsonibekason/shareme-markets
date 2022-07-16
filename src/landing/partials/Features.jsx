@@ -46,13 +46,13 @@ function Features() {
         <div className="pt-12 md:pt-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">
+            <h1 className="text-lg mb-4">
               Explore the{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-gray-400">
                 Shareme
               </span>
             </h1>
-            <p className="text-xl text-gray-600">Shareme</p>
+            <p className="text-sm text-gray-600">Shareme</p>
           </div>
 
           {/* Section content */}
@@ -63,8 +63,8 @@ function Features() {
               data-aos="fade-right"
             >
               <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3">Explore Shareme</h3>
-                <p className="text-xl text-gray-600">
+                <h3 className="text-lg mb-3">Explore Shareme</h3>
+                <p className="text-[.65rem] lg:text-sm text-gray-600">
                   {sharemeValues.map((items, index) => (
                     <span
                       className="bg-clip-text"
@@ -90,10 +90,10 @@ function Features() {
                   }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">
+                    <div className="font-bold leading-snug tracking-tight mb-1 text-[1rem]">
                       Building the Simple ecosystem
                     </div>
-                    <div className="text-gray-600">
+                    <div className="text-gray-600 text-sm">
                       Take collaboration to the next level with security and
                       administrative features built for teams.
                     </div>
@@ -121,10 +121,10 @@ function Features() {
                   }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">
+                    <div className="font-bold leading-snug tracking-tight mb-1 text-[1rem]">
                       Generate Photos and Sell them with crypto or Stripe
                     </div>
-                    <div className="text-gray-600">
+                    <div className="text-gray-600 text-sm">
                       Take your profiles to the next level level by uptimizing
                       your cashflow quadrant And Retrieving quality and
                       standardized photos
@@ -156,10 +156,10 @@ function Features() {
                   }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">
+                    <div className="font-bold leading-snug tracking-tight mb-1 text-[1rem]">
                       Create Well Optimized Short Videos
                     </div>
-                    <div className="text-gray-600">
+                    <div className="text-gray-600 text-sm">
                       Take your business and videos to the next level by
                       creating well optimized, less catched and minimal bases
                       duration short videos
