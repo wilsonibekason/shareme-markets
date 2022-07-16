@@ -13,9 +13,9 @@ import MasonaryLayout from "./MasonaryLayout";
 import Spinner from "./Spinner";
 
 const activeBtnStyles =
-  "bg-red-500 text-white font-bold p-1 lg:p-2 text-[.5rem] rounded-full w-20 outline-none";
+  "bg-red-500 text-white font-bold p-1 lg:p-2 text-[.5rem] lg:text-lg rounded-full w-20 outline-none";
 const notActiveBtnStyles =
-  "bg-primary mr-4 text-black font-bold p-1 lg:p-2 text-[.5rem] rounded-full w-20 outline-none";
+  "bg-primary mr-4 text-black font-bold p-1 lg:p-2 text-[.5rem] lg:text-lg  rounded-full w-20 outline-none";
 
 const UserProfile = () => {
   const [user, setUser] = useState();
@@ -78,7 +78,7 @@ const UserProfile = () => {
                 alt="user-pic"
               />
               <img
-                className="rounded-full w-[4rem] h-[4rem] lg:w-10 lg:h-20 -mt-10 shadow-xl object-cover"
+                className="rounded-full w-[4rem] h-[4rem] lg:w-20 lg:h-20 -mt-10 shadow-xl object-cover"
                 src={user?.image}
                 alt="user-pic"
               />

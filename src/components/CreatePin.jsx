@@ -208,7 +208,7 @@ const CreatePin = ({ user }) => {
                 </select>
               </div>
               <div className="flex justify-end items-end mt-5">
-                {!uploadLoading ? (
+                {uploadLoading ? (
                   <button className={`${loadedButtonSty} `}>
                     <svg
                       class="animate-spin rounded-full w-4 h-4 mr-2 -ml-1 border-b-2 border-gray-900"

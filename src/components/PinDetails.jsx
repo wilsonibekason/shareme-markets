@@ -126,7 +126,7 @@ const PinDetail = ({ user }) => {
                 <a
                   href={`${pinDetail.image.asset.url}?dl=`}
                   download
-                  className="bg-secondaryColor p-2 text-xl rounded-full flex items-center justify-center text-dark opacity-75 hover:opacity-100 w-5 h-5 lg:w-10 lg:h-10 md:w-8 md:h-8 "
+                  className="bg-secondaryColor p-2 text-xl rounded-full flex items-center justify-center text-dark opacity-75 hover:opacity-100 w-10 h-10 lg:w-10 lg:h-10 md:w-8 md:h-8 "
                 >
                   <MdDownloadForOffline fontSize={25}/>
                 </a>
@@ -221,7 +221,7 @@ const PinDetail = ({ user }) => {
                 <Link to={`/user-profile/${user?._id}`}>
                 <img
                   src={user?.image}
-                  className="w-5 h-5 lg:w-10 lg:h-10 md:w-6 md:h-6 rounded-full cursor-pointer"
+                  className="w-4 h-4 lg:w-10 lg:h-10 md:w-6 md:h-6 rounded-full cursor-pointer"
                   alt="user-profile"
                 />
               </Link>
@@ -245,7 +245,7 @@ const PinDetail = ({ user }) => {
                             
                   <button
                 type="button"
-                className="bg-red-500 text-white rounded-full px-2 py-1.5 lg:px-4 lg:py-2  text-[10px] backdrop:lg:text-[15px] outline-none"
+                className="bg-red-500 text-white rounded-full px-2 py-1.5 lg:px-4 lg:py-2  text-[10px] lg:text-sm last:backdrop:lg:text-[15px] outline-none"
                 onClick={addComment}
               >
                 {addingComment ? "sending..." : "send"}
