@@ -1,6 +1,7 @@
 import React from 'react'
 import Masonry from 'react-masonry-css';
 import HomePinSkeletonLoader from './SkeletonLoader';
+import {v4 as uuid} from 'uuid'
 
 // creating breakpoints limiits
 const breakpointColumnsObj = {
@@ -15,7 +16,7 @@ const breakpointColumnsObj = {
  // loader number
  let COUNTER = 12;
 const MasonarySkelectonLoader = () => {
-    let pinsLoaded = Array(COUNTER).fill(<HomePinSkeletonLoader className="" />)
+    let pinsLoaded = Array(COUNTER).fill(<HomePinSkeletonLoader className="" key={uuid} />)
   return (
     <Masonry 
      className='flex animate-slide-fwd space-x-5'

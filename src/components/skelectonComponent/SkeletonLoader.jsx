@@ -5,7 +5,7 @@ const HomePinSkeletonLoader = () => {
   return (
     <>
 
-   <div className="border border-blue-200 shadow rounded-md p-4 max-w-lg w-full h-[15%] md:h-[40%] lg:h-[80%] ">
+   <div className="border border-blue-200 shadow rounded-md p-4 max-w-lg w-full h-[15%] md:h-[40%] lg:h-[60%] ">
   <div className="animate-pulse flex space-x-4">
     <div className="rounded-full bg-slate-200 h-10 w-10"></div>
     <div className="flex-1 space-y-6 py-1">
