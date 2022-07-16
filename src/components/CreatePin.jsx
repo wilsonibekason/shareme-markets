@@ -88,7 +88,7 @@ const CreatePin = ({ user }) => {
     } else {
       setFields(true);
 
-      setTimeout(() => {e
+      setTimeout(() => {
         setFields(false);
       }, 2000);
     }

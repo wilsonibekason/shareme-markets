@@ -12,12 +12,12 @@ function Footer() {
             <div className="mb-2">
               {/* Logo */}
               <Link to="/" className="inline-block" aria-label="Cruip">
-                <img src={LogoSvg} alt="shareme-logo" />
+                <img src={LogoSvg} alt="shareme-logo" width={'50%'} height={'50%'}/>
               </Link>
             </div>
             <div className="text-sm text-gray-600">
               <Link
-                to="#"
+                to="#" 
                 className="text-gray-600 hover:text-gray-900 hover:underline transition duration-150 ease-in-out"
               >
                 Terms
