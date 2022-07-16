@@ -14,8 +14,8 @@ function FeaturesBlocks() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4 sm:h5">What Are You Waiting For </h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-[1rem] lg:text-lg mb-4 ">What Are You Waiting For </h2>
+            <p className=" text-gray-600 text-sm">
               Explore the Internet source of freely-useable images and short
               videos around the world Powered by creators and users around the
               globe
@@ -27,7 +27,7 @@ function FeaturesBlocks() {
             {/* 1st item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
               <svg
-                className="w-16 h-16 p-1 -mt-1 mb-2"
+                className="w-10 h-10 lg:w-16 lg:h-16 p-1 -mt-1 mb-2"
                 viewBox="0 0 64 64"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -60,10 +60,10 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
+              <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
                 Science
               </h4>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-600 text-center text-sm">
                 Access to all science photos of your choice
               </p>
             </div>
@@ -71,7 +71,7 @@ function FeaturesBlocks() {
             {/* 2nd item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
               <svg
-                className="w-16 h-16 p-1 -mt-1 mb-2"
+                className="w-10 h-10 lg:w-16 lg:h-16 p-1 -mt-1 mb-2"
                 viewBox="0 0 64 64"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -101,10 +101,10 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
+              <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
                 Programming
               </h4>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-600 text-center text-sm">
                 Access programming shorts and images
               </p>
             </div>
@@ -112,7 +112,7 @@ function FeaturesBlocks() {
             {/* 3rd item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
               <svg
-                className="w-16 h-16 p-1 -mt-1 mb-2"
+                className="w-10 h-10 lg:w-16 lg:h-16 p-1 -mt-1 mb-2"
                 viewBox="0 0 64 64"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -135,10 +135,10 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
+              <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
                 Arts
               </h4>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-600 text-center text-sm">
                 Have access to arts based images at a spot
               </p>
             </div>
@@ -146,7 +146,7 @@ function FeaturesBlocks() {
             {/* 4th item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
               <svg
-                className="w-16 h-16 p-1 -mt-1 mb-2"
+                className="w-10 h-10 lg:w-16 lg:h-16 p-1 -mt-1 mb-2"
                 viewBox="0 0 64 64"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -182,10 +182,10 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
+              <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
                 Wallpapers
               </h4>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-600 text-center text-sm">
                 Access explicit wallpapers of all kinds as well
               </p>
             </div>
@@ -193,7 +193,7 @@ function FeaturesBlocks() {
             {/* 5th item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
               <svg
-                className="w-16 h-16 p-1 -mt-1 mb-2"
+                className="w-10 h-10 lg:w-16 lg:h-16 p-1 -mt-1 mb-2"
                 viewBox="0 0 64 64"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -216,10 +216,10 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
+              <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
                 Business
               </h4>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-600 text-center text-sm">
                 Access to business career experiences and shorts from wonderful
                 creators
               </p>
@@ -228,7 +228,7 @@ function FeaturesBlocks() {
             {/* 6th item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
               <svg
-                className="w-16 h-16 p-1 -mt-1 mb-2"
+                className="w-10 h-10 lg:w-16 lg:h-16 p-1 -mt-1 mb-2"
                 viewBox="0 0 64 64"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -260,10 +260,10 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                Fashion And Entertainment
+              <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
+                Entertainment
               </h4>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-600 text-center text-sm">
                 Access the globe that spans high art and popular culture which
                 is a signficant part of the material and visual culture
               </p>
