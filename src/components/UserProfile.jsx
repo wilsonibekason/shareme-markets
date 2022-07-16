@@ -140,8 +140,8 @@ const UserProfile = () => {
           </div>
 
           {pins?.length === 0 && (
-            <div className="flex justify-center font-bold items-center w-full text-1xl mt-2">
-              {user?.userName} haven't added any yet
+            <div className="flex justify-center font-bold items-center w-full text-[.7rem] lg:text-xl mt-2">
+              {user?.userName} haven't done any yet
             </div>
           )}
         </div>
