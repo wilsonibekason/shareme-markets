@@ -53,7 +53,7 @@ const Pin = ({ pin, onScroll }) => {
 
   const savePin = (id) => {
     if (alreadySaved?.length === 0) {
-      setSavingPost(true);B
+      setSavingPost(true);
       client
         .patch(id)
         .setIfMissing({ save: [] })
@@ -181,9 +181,9 @@ const Pin = ({ pin, onScroll }) => {
         <img
           src={postedBy?.image}
           alt="postedBy_image"
-          className="w-2.5 h-2.5 md:w-4 md:h-4 lg:w-5 lg:h-5  rounded-full object-cover"
+          className="w-2.5 h-2.5 md:w-4 md:h-4 lg:w-4 lg:h-4  rounded-full object-cover"
         />
-        <p className="font-semibold capitalize text-[.5rem] sm:text-[.5rem] sm:inline">
+        <p className="font-semibold capitalize text-[.5rem] lg:text-[.8rem] sm:inline">
           {userProfileName?.length > 18
             ? userProfileName.slice(0, 17) + "..."
             : userProfileName}

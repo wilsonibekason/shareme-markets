@@ -126,12 +126,12 @@ const PinDetail = ({ user }) => {
                 <a
                   href={`${pinDetail.image.asset.url}?dl=`}
                   download
-                  className="bg-secondaryColor p-2 text-xl rounded-full flex items-center justify-center text-dark opacity-75 hover:opacity-100 w-4 h-4 lg:w-10 lg:h-10 md:w-8 md:h-8 "
+                  className="bg-secondaryColor p-2 text-xl rounded-full flex items-center justify-center text-dark opacity-75 hover:opacity-100 w-5 h-5 lg:w-10 lg:h-10 md:w-8 md:h-8 "
                 >
                   <MdDownloadForOffline />
                 </a>
               </div>
-              <a className="text-[10px]"href={pinDetail.destination} target="_blank" rel="noreferrer">
+              <a className="text-[15px] md:text-[20px] lg:text-lg"href={pinDetail.destination} target="_blank" rel="noreferrer">
                 {`${pinDetail.destination?.slice(0, 20)} ....`}
               </a>
             </div>
@@ -225,25 +225,31 @@ const PinDetail = ({ user }) => {
                   alt="user-profile"
                 />
               </Link>
-                <label htmlFor="comment" className="text-lg text-gray-900">
+                <label htmlFor="comment" className="text-[.5rem] lg:text-lg text-gray-900 my-3">
                   Add a comment
                 </label>
                 </div>
                 
-                <textarea name="comments" id="400" cols="30" rows="10" 
+                <textarea 
+                name="comments" 
+                id="add-comment-box" 
+                cols="30" 
+                rows="10" 
+                placeholder="Add a comment"
                 className="w-full h-20 p-2 border rounded focus:outline-none focus:ring-gray-50 focus:ring-1"
-                ></textarea> 
+                value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                />
                 </div>
                 <div>
-                  <button 
-                  className="bg-red-500 text-white rounded-full px-2.5 py-1.5 lg:px-4 lg:py-2  text-[15px] outline-none"
-                  onClick={addComment}
-                  >
-                    {addingComment ? "sending..." : "send"}
-                  </button>
-                  <button className='mx-1 bg-red-500 text-white rounded-full px-2.5 py-1.5 lg:px-4 lg:py-2  text-[15px] outline-none'>
-                    cancel
-                  </button>
+                            
+                  <button
+                type="button"
+                className="bg-red-500 text-white rounded-full px-2.5 py-1.5 lg:px-4 lg:py-2  text-[15px] outline-none"
+                onClick={addComment}
+              >
+                {addingComment ? "Sending..." : "send"}
+              </button>
                 </div>
                </form>
             </div>
