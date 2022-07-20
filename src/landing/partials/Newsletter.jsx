@@ -97,10 +97,10 @@ function Newsletter() {
             <div className="relative flex flex-col lg:flex-row justify-between items-center">
               {/* CTA content */}
               <div className="text-center lg:text-left lg:max-w-xl">
-                <h3 className="text-sm lg:text-lg text-white mb-2">
+                <h3 className="text-[14px] md:text-[17px] lg:text-sm  text-white mb-2">
                   Nothing is Real until it is experienced
                 </h3>
-                <p className="text-gray-300 text-sm lg:text-lg mb-6">
+                <p className="text-gray-300 text-[14px] md:text-[17px] lg:text-sm mb-6">
                   Send us your email to get the most from us
                 </p>
 
@@ -109,12 +109,12 @@ function Newsletter() {
                   <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
                     <input
                       type="email"
-                      className="form-input w-full appearance-none bg-gray-800 border border-gray-700 focus:border-gray-600 px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500 rounded-full "
+                      className="form-input w-full appearance-none bg-gray-800 border border-gray-700 focus:border-gray-600 px-1 py-2 lg:px-4 lg:py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center"
                       placeholder="Your email…"
                       aria-label="Your email…"
                     />
                     <a
-                      className="btn text-white bg-blue-600 hover:bg-blue-700 shadow rounded-full text-sm lg:text-lg "
+                      className="btn text-white bg-blue-600 hover:bg-blue-700 shadow rounded-full text-[14px] md:text-[17px] lg:text-sm "
                       href="#0"
                     >
                       Subscribe

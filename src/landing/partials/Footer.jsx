@@ -88,7 +88,7 @@ function Footer() {
                     <input
                       id="newsletter"
                       type="email"
-                      className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm "
+                      className="form-input w-full text-gray-800 px-3 py-2 pr-12  placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm "
                       placeholder="Your email"
                       required
                     />
