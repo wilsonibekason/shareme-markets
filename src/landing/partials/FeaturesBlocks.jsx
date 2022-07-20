@@ -15,7 +15,7 @@ function FeaturesBlocks() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="text-[1rem] lg:text-lg mb-4 ">What Are You Waiting For </h2>
-            <p className=" text-gray-600 text-sm">
+            <p className=" text-gray-600 text-[14px] md:text-[17px] lg:text-sm ">
               Explore the Internet source of freely-useable images and short
               videos around the world Powered by creators and users around the
               globe
@@ -63,7 +63,7 @@ function FeaturesBlocks() {
               <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
                 Science
               </h4>
-              <p className="text-gray-600 text-center text-sm">
+              <p className="text-gray-600 text-center text-[14px] md:text-[17px] lg:text-sm ">
                 Access to all science photos of your choice
               </p>
             </div>
@@ -104,7 +104,7 @@ function FeaturesBlocks() {
               <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
                 Programming
               </h4>
-              <p className="text-gray-600 text-center text-sm">
+              <p className="text-gray-600 text-center text-[14px] md:text-[17px] lg:text-sm ">
                 Access programming shorts and images
               </p>
             </div>
@@ -185,7 +185,7 @@ function FeaturesBlocks() {
               <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
                 Wallpapers
               </h4>
-              <p className="text-gray-600 text-center text-sm">
+              <p className="text-gray-600 text-center text-[14px] md:text-[17px] lg:text-sm ">
                 Access explicit wallpapers of all kinds as well
               </p>
             </div>
@@ -219,7 +219,7 @@ function FeaturesBlocks() {
               <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
                 Business
               </h4>
-              <p className="text-gray-600 text-center text-sm">
+              <p className="text-gray-600 text-center text-[14px] md:text-[17px] lg:text-sm ">
                 Access to business career experiences and shorts from wonderful
                 creators
               </p>
@@ -263,7 +263,7 @@ function FeaturesBlocks() {
               <h4 className="text-lg font-bold leading-snug tracking-tight mb-1">
                 Entertainment
               </h4>
-              <p className="text-gray-600 text-center text-sm">
+              <p className="text-gray-600 text-center text-[14px] md:text-[17px] lg:text-sm ">
                 Access the globe that spans high art and popular culture which
                 is a signficant part of the material and visual culture
               </p>

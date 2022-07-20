@@ -90,7 +90,7 @@ function Features() {
                   }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1 text-[1rem]">
+                    <div className="font-bold leading-snug tracking-tight mb-1 text-[.9rem]">
                       Building the Simple ecosystem
                     </div>
                     <div className="text-gray-600 text-[14px] md:text-[17px] lg:text-sm ">
@@ -121,7 +121,7 @@ function Features() {
                   }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1 text-[1rem]">
+                    <div className="font-bold leading-snug tracking-tight mb-1 text-[.9rem]">
                       Generate Photos and Sell them with crypto or Stripe
                     </div>
                     <div className="text-gray-600 text-[14px] md:text-[17px] lg:text-sm ">
