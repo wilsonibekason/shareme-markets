@@ -38,7 +38,7 @@ function Footer() {
           {/* 2nd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h6 className="text-gray-800 font-medium mb-2">Products</h6>
-            <ul className="text-sm">
+            <ul className="text-[14px] md:text-[17px] lg:text-sm">
               {productSection.map((SECTION, index) => (
                  <li className="mb-2">
                  <Link
@@ -57,7 +57,7 @@ function Footer() {
           {/* 3rd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h6 className="text-gray-800 font-medium mb-2">Resources</h6>
-            <ul className="text-sm">
+            <ul className="text-[14px] md:text-[17px] lg:text-sm">
               {companySection.map((SECTION, index) => (
                  <li className="mb-2">
                  <Link
@@ -75,7 +75,7 @@ function Footer() {
           {/* 5th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
             <h6 className="text-gray-800 font-medium mb-2">Subscribe</h6>
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-[14px] md:text-[17px] lg:text-sm text-gray-600 mb-4">
               Get the latest news and articles to your inbox every month.
             </p>
             <form>
@@ -88,7 +88,7 @@ function Footer() {
                     <input
                       id="newsletter"
                       type="email"
-                      className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm"
+                      className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm "
                       placeholder="Your email"
                       required
                     />
@@ -173,7 +173,7 @@ function Footer() {
           </ul>
 
           {/* Copyrights note */}
-          <div className="text-sm text-gray-600 mr-4">
+          <div className="text-[14px] md:text-[17px] lg:text-sm text-gray-600 mr-4">
             Made by{" "}
             <a
               className="text-blue-600 hover:underline"
