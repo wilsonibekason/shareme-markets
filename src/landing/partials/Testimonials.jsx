@@ -47,7 +47,7 @@ function Testimonials() {
             <h2 className="text-lg mb-4">
               Trusted by many organization and clients
             </h2>
-            <p className="text-sm text-gray-600" data-aos="zoom-y-out">
+            <p className="text-[14px] md:text-[17px] lg:text-sm  text-gray-600" data-aos="zoom-y-out">
               <span
                 className={`${gradientReused} bg-gradient-to-l from-gray-400 to-gray-800`}
               >
