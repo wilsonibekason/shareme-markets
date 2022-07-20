@@ -93,7 +93,7 @@ function Features() {
                     <div className="font-bold leading-snug tracking-tight mb-1 text-[1rem]">
                       Building the Simple ecosystem
                     </div>
-                    <div className="text-gray-600 text-sm">
+                    <div className="text-gray-600 text-[14px] md:text-[17px] lg:text-sm ">
                       Take collaboration to the next level with security and
                       administrative features built for teams.
                     </div>
@@ -124,7 +124,7 @@ function Features() {
                     <div className="font-bold leading-snug tracking-tight mb-1 text-[1rem]">
                       Generate Photos and Sell them with crypto or Stripe
                     </div>
-                    <div className="text-gray-600 text-sm">
+                    <div className="text-gray-600 text-[14px] md:text-[17px] lg:text-sm ">
                       Take your profiles to the next level level by uptimizing
                       your cashflow quadrant And Retrieving quality and
                       standardized photos
@@ -156,10 +156,10 @@ function Features() {
                   }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1 text-[1rem]">
+                    <div className="font-bold leading-snug tracking-tight mb-1 text-[.9rem]">
                       Create Well Optimized Short Videos
                     </div>
-                    <div className="text-gray-600 text-sm">
+                    <div className="text-gray-600 text-[14px] md:text-[17px] lg:text-sm ">
                       Take your business and videos to the next level by
                       creating well optimized, less catched and minimal bases
                       duration short videos

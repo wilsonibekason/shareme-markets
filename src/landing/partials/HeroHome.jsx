@@ -70,7 +70,7 @@ function HeroHome() {
                 <div>
                   <Link
                     to="/signin"
-                    className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 text-sm rounded-full"
+                    className="btn text-white bg-blue-400 hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0 text-[14px] md:text-[17px] lg:text-sm rounded-full"
                     href="#0"
                   >
                     Get Started
@@ -78,7 +78,7 @@ function HeroHome() {
                 </div>
                 <div>
                   <a
-                    className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4 rounded-full text-sm"
+                    className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4 rounded-full text-[14px] md:text-[17px] lg:text-sm "
                     href="#0 "
                   >
                     Learn more
