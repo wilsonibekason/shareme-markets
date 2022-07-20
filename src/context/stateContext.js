@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
-
+const Context = useContext();
 export const StateContext = ({ children }) => {
-  const Context = useContext();
+  
 
   return <Context.Provider value={{}}>{children}</Context.Provider>;
 };
