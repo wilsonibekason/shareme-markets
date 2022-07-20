@@ -1,0 +1,17 @@
+
+
+Hi everyone, i just completed A Photo-Sharing Platform called SHAREME, The world is becoming more digital and according to statistics people spend over 90% of their leisure time on what i call the TAGFYN ( tiktok, amazon, google, facebook, youtube, and netflix) Platforms. People spend their time there for entertainment, education, marketing, business development and a lot more.
+I decided to develop a social network for image sharing and social media service which allows people to discover information on the internet using images and short videos so that people can find inspirations and ideas for their interest and hobbies.
+Every information which is represented by an image or a short video can be browsed and download or saved by SHAREME users. 
+One of the often questions i get is  CAN I MAKE MONEY FROM IT, 
+Each image or short video has a website or destintion link attached to it, which makes SHAREME great for driving traffic and making sales. 
+And if you are into dropshipping or affiliate marketing, SHAREME is a very good platform for you
+If you are a developer reading this post, i have a tip for you.
+This entire application was built with the SERN stack (Sanity CMS, Expressjs, React, and Nodejs).
+For more information about the platform click on the links below
+
+developers link
+github.com/wilsonibekason
+
+website link
+shareme-markets.vercel.app
