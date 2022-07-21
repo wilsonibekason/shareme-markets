@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { OnRegisterContext } from "../../context/onRegisterContext";
 
 import Header from "../partials/Header";
 
 function SignUp() {
+  const {user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd ,responseGoogle} = OnRegisterContext;
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Site header */}

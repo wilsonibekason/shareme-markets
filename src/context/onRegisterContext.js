@@ -1,13 +1,18 @@
 
 import { useState, useContext, createContext, useEffect, useRef } from "react";
+// import internal dependencies
 import axios from '../../api/baseApi';
+
+
+
+
 const Context = createContext();
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = '/register';
 
-const OnRegisterContext = ({children}) => {
+export const OnRegisterContext = ({children}) => {
 const userRef = useRef();
 const errRef = useRef();
 
@@ -84,8 +89,30 @@ try {
    errRef.current.focus();
 }
 }
+
+  // Google Auth registration code 
+  // initalise navigate as Hook
+
+   const navigate = useNavigate();
+   const responseGoogle = (response) => {
+     console.log(response);
+     console.log("====================================");
+     console.log(response?.error);
+     console.log("====================================");
+     localStorage.setItem("user", JSON.stringify(response?.profileObj));
+     const { name, googleId, imageUrl } = response?.profileObj;
+     const doc = {
+       _id: googleId,
+       _type: "user",
+       userName: name,
+       image: imageUrl,
+     };
+     client.createIfNotExists(doc).then(() => {
+       navigate("/signin", { replace: true });
+     });
+   }
        return(
-        <Context.Provider value={}>
+        <Context.Provider value={{user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd ,responseGoogle}}>
            {children}
         </Context.Provider>
        )
