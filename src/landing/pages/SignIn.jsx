@@ -49,7 +49,7 @@ function SignIn() {
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label
-                        className="block text-gray-800 text-sm font-medium mb-1"
+                        className="block text-gray-800 text-[14px] md:text-[17px] lg:text-sm font-medium mb-1"
                         htmlFor="email"
                       >
                         Email
@@ -57,7 +57,7 @@ function SignIn() {
                       <input
                         id="email"
                         type="email"
-                        className="form-input w-full text-gray-800 rounded-full"
+                        className="form-input w-full text-gray-800 rounded-full px-1 py-2 lg:px-4 lg:py-3 placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center"
                         placeholder="Enter your email address"
                         required
                       />
@@ -67,7 +67,7 @@ function SignIn() {
                     <div className="w-full px-3">
                       <div className="flex justify-between">
                         <label
-                          className="block text-gray-800 text-sm font-medium mb-1"
+                          className="block text-gray-800 text-[14px] md:text-[17px] lg:text-sm font-medium mb-1"
                           htmlFor="password"
                         >
                           Password
@@ -82,7 +82,7 @@ function SignIn() {
                       <input
                         id="password"
                         type="password"
-                        className="form-input w-full text-gray-800 rounded-full"
+                        className="form-input w-full text-gray-800 rounded-full px-1 py-2 lg:px-4 lg:py-3 placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center"
                         placeholder="Enter your password"
                         required
                       />
@@ -93,7 +93,7 @@ function SignIn() {
                       <div className="flex justify-between">
                         <label className="flex items-center">
                           <input type="checkbox" className="form-checkbox" />
-                          <span className="text-gray-600 ml-2 text-sm">
+                          <span className="text-gray-600 ml-2 text-[14px] md:text-[17px] lg:text-sm">
                             Keep me signed in
                           </span>
                         </label>
@@ -102,7 +102,7 @@ function SignIn() {
                   </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full rounded-full">
+                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full rounded-full px-1 py-2 lg:px-4 lg:py-3 text-[14px] md:text-[17px] lg:text-sm  text-center">
                         Sign in 
                       </button>
                     </div>
@@ -151,11 +151,11 @@ function SignIn() {
                     </div>
                   </div>
                 </form>
-                <div className="text-gray-600 text-center mt-6 text-sm">
+                <div className="text-gray-600 text-center mt-6 text-[14px] md:text-[17px] lg:text-sm">
                   Don’t have an account?{" "}
                   <Link
                     to="/signup"
-                    className="text-blue-600 hover:underline transition duration-150 ease-in-out text-sm"
+                    className="text-blue-600 hover:underline transition duration-150 ease-in-out"
                   >
                     Sign up
                   </Link>
