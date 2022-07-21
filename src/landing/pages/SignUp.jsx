@@ -1,4 +1,4 @@
--- React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { OnRegisterContext } from "../../context/onRegisterContext";
 
@@ -18,7 +18,7 @@ function SignUp() {
             <div className="pt-32 pb-12 md:pt-40 md:pb-20">
               {/* Page header */}
               <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-                <h1 className="text-lg lg:text-lg font-[800]">
+                <h1 className="text-lg lg:text-lg font-bold">
                   This is your first step to unlimited experiences
                 </h1>
               </div>
@@ -111,7 +111,7 @@ function SignUp() {
                  
                   <div className="flex flex-wrap -mx-3">
                     <div className="w-full px-3">
-                      <button className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center rounded-full">
+                      <button className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center rounded-full">Feedback
                         <svg
                           className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4"
                           viewBox="0 0 16 16"
