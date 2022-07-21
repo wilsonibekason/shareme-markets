@@ -12,7 +12,23 @@ const userRef = useRef();
 const errRef = useRef();
 
 // defining registrstion states
+const [user, setUser] = useState('');
+const [validName, setValidName] = useState(false);
+const [userFocus, setUserFocus] = useState(false);
 
+const [pwd, setPwd] = useState('');
+const [validPwd, setValidPwd] = useState(false);
+const [pwdFocus, setpwdFocu] = useState(false);
+
+const [errMsg, setErrMsg] = useState('');
+const [success, setSuccess] = useState(false);
+
+
+useEffect(() => {
+   userRef.current.focus();
+});
+
+useEffect(())
        return(
         <Context.Provider value={''}>
            {children}
