@@ -1,4 +1,4 @@
-import React from "react";
+-- React from "react";
 import { Link } from "react-router-dom";
 import { OnRegisterContext } from "../../context/onRegisterContext";
 
@@ -18,7 +18,7 @@ function SignUp() {
             <div className="pt-32 pb-12 md:pt-40 md:pb-20">
               {/* Page header */}
               <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-                <h1 className="text-lg lg:text-lg">
+                <h1 className="text-lg lg:text-lg font-[800]">
                   This is your first step to unlimited experiences
                 </h1>
               </div>
