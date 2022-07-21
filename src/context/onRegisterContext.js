@@ -20,6 +20,10 @@ const [pwd, setPwd] = useState('');
 const [validPwd, setValidPwd] = useState(false);
 const [pwdFocus, setpwdFocu] = useState(false);
 
+const [matchPwd, setMatchPwd] = useState('');
+const [validMatch, setValidMatch] = useState(false);
+const [matchFocus, setMatchFocus] = useState(false);
+
 const [errMsg, setErrMsg] = useState('');
 const [success, setSuccess] = useState(false);
 
@@ -28,7 +32,15 @@ useEffect(() => {
    userRef.current.focus();
 });
 
-useEffect(())
+useEffect(() => {
+   setValidName(USER_REGEX.test(user));
+}, [user]);
+
+useEffect(() =>{
+   setValidPwd(PWD_REGEX.test(pwd));
+   setValidMatch(pwd === matchPwd);
+
+}, [pwd, matchPwd])
        return(
         <Context.Provider value={''}>
            {children}
