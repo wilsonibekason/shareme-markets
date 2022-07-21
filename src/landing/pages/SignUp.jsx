@@ -29,7 +29,7 @@ function SignUp() {
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label
-                        className="block text-gray-800 text-sm font-medium mb-1"
+                        className="block text-gray-800 text-[14px] md:text-[17px] lg:text-sm font-medium mb-1"
                         htmlFor="name"
                       >
                         Name <span className="text-red-600">*</span>
@@ -37,7 +37,7 @@ function SignUp() {
                       <input
                         id="name"
                         type="text"
-                        className="form-input w-full text-gray-800 rounded-full"
+                        className="form-input w-full text-gray-800 rounded-full px-1 py-2 lg:px-4 lg:py-3 placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center" 
                         placeholder="Enter your name"
                         required
                       />
@@ -46,7 +46,7 @@ function SignUp() {
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label
-                        className="block text-gray-800 text-sm font-medium mb-1"
+                        className="block text-gray-800 text-[14px] md:text-[17px] lg:text-smfont-medium mb-1"
                         htmlFor="email"
                       >
                         Email <span className="text-red-600">*</span>
@@ -54,7 +54,7 @@ function SignUp() {
                       <input
                         id="email"
                         type="email"
-                        className="form-input w-full text-gray-800 rounded-full"
+                        className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3 "
                         placeholder="Enter your email address"
                         required
                       />
@@ -63,7 +63,7 @@ function SignUp() {
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label
-                        className="block text-gray-800 text-sm font-medium mb-1"
+                        className="block text-gray-800 text-[14px] md:text-[17px] lg:text-sm font-medium mb-1"
                         htmlFor="password"
                       >
                         Password <span className="text-red-600">*</span>
@@ -71,7 +71,7 @@ function SignUp() {
                       <input
                         id="password"
                         type="password"
-                        className="form-input w-full text-gray-800 rounded-full"
+                        className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3"
                         placeholder="Enter your password"
                         required
                       />
@@ -79,7 +79,7 @@ function SignUp() {
                   </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full text-sm rounded-full">
+                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full text-[14px] md:text-[17px] lg:text-sm rounded-full">
                         Sign up
                       </button>
                     </div>
@@ -126,11 +126,11 @@ function SignUp() {
                     </div>
                   </div>
                 </form>
-                <div className="text-gray-600 text-center mt-6 text-sm">
+                <div className="text-gray-600 text-center mt-6 text-[14px] md:text-[17px] lg:text-sm ">
                   Already using Shareme?{" "}
                   <Link
                     to="/signin"
-                    className="text-blue-600 hover:underline transition duration-150 ease-in-out text-sm"
+                    className="text-blue-600 hover:underline transition duration-150 ease-in-out"
                   >
                     Sign in
                   </Link>
