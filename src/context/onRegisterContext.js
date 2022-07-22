@@ -1,7 +1,7 @@
 
 import { useState, useContext, createContext, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-
+import GoogleLogin from "react-google-login";
 // import internal dependencies
 import axios from '../api/baseApi';
 import { client } from "../client";
@@ -113,7 +113,7 @@ try {
      });
    }
        return(
-        <Context.Provider value={{user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd ,responseGoogle}}>
+        <Context.Provider value={{user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd ,responseGoogle, GoogleLogin}}>
            {children}
         </Context.Provider>
        )

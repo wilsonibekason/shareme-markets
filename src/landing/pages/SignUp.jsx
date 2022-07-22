@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import GoogleLogin from "react-google-login";
 import { OnRegisterContext } from "../../context/onRegisterContext";
 
 import Header from "../partials/Header";
 
 function SignUp() {
-  const {user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd ,responseGoogle} = OnRegisterContext;
+  const {user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd, responseGoogle} = OnRegisterContext;
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Site header */}
@@ -95,7 +96,7 @@ function SignUp() {
                     </a>
                     .
                   </div>
-                </form>
+           c     </form>
                 <div className="flex items-center my-6">
                   <div
                     className="border-t border-gray-300 flex-grow mr-3"
@@ -109,20 +110,33 @@ function SignUp() {
                 </div>
                 <form>
                  
-                  <div className="flex flex-wrap -mx-3">
+                <div className="flex flex-wrap -mx-3">
                     <div className="w-full px-3">
-                      <button className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center rounded-full">Feedback
-                        <svg
-                          className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4"
-                          viewBox="0 0 16 16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" />
-                        </svg>
-                        <span className="flex-auto pl-16 pr-8 -ml-16 text-[.7rem] lg:text-sm">
-                          Continue with Google
-                        </span>
-                      </button>
+                      <GoogleLogin
+                        //  clientId={`${process.env.WEB2_CLOUD_PUBLIC_API}`}
+                        clientId="843975118254-pqumnmmant7vg9d1o4qgv7boc3bfth3g.apps.googleusercontent.com"
+                        render={(renderProps) => (
+                          <button
+                            className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center rounded-full" 
+                            onClick={renderProps.onClick}
+                            disabled={renderProps.disabled}
+                          >
+                            <svg
+                              className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" />
+                            </svg>
+                            <span className="flex-auto pl-16 pr-8 -ml-16 text-[.7rem] lg:text-sm">
+                              Continue with Google
+                            </span>
+                          </button>
+                        )}
+                        onSuccess={responseGoogle}
+                        onFailure={responseGoogle}
+                        cookiePolicy="single_host_origin"
+                      />
                     </div>
                   </div>
                 </form>
