@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import { OnRegisterContext } from "../../context/onRegisterContext";
@@ -6,13 +6,35 @@ import { OnRegisterContext } from "../../context/onRegisterContext";
 import Header from "../partials/Header";
 import { client } from "../../client";
 
+
+// defining dynamic styles for login validations and error handling on bad user authentication  and authorization 
 function SignUp() {
 
   const navigate = useNavigate();
-  const {user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd, } = OnRegisterContext;
+  const {user, pwd, setValidMatch, setValidName, setValidPwd, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd, userRef, errRef, } = OnRegisterContext;
+
+//////// userefy called when application .
 
 
+useEffect(() => {
+    userRef.current.focus;
+}, []);
+
+useEffect(() => {
+    setValidName(PWD_REGEX.test(user));
+}, [user]);
    
+useEffect(() => {
+  setValidMatch(PWD_REGEX.test(pwd));
+  setValidPwd(pwd === matchPwd);
+}, [pwd, matchPwd]);
+
+// when the application mounts the error should be set to an empty string
+useEffect(() => {
+ setErrMsg("");
+}, []);
+
+
   const responseGoogle = (response) => {
 
 
@@ -34,7 +56,7 @@ function SignUp() {
   }
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
-      {/*  Site header */}
+      {/*  Site header */}''
       <Header />
 
       {/*  Page content */}
@@ -63,7 +85,7 @@ function SignUp() {
                       <input
                         id="name"
                         type="text"
-                        className="form-input w-full text-gray-800 rounded-full px-1 py-2 lg:px-4 lg:py-3 placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center" 
+                        className="form-input w-full text-gray-800 rounded-full px-1 py-2 lg:px-4 lg:py-3 placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center border-red-900" 
                         placeholder="Enter your name"
                         required
                       />
