@@ -97,7 +97,7 @@ function SignUp() {
                       <input
                         id="password"
                         type="password"
-                        className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3"
+                        className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3 "
                         placeholder="Enter your password"
                         required
                       />
@@ -121,7 +121,7 @@ function SignUp() {
                     </a>
                     .
                   </div>
-           c     </form>
+                </form>
                 <div className="flex items-center my-6">
                   <div
                     className="border-t border-gray-300 flex-grow mr-3"
