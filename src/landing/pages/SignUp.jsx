@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import { OnRegisterContext } from "../../context/onRegisterContext";
@@ -9,30 +9,32 @@ import { client } from "../../client";
 
 // defining dynamic styles for login validations and error handling on bad user authentication  and authorization 
 function SignUp() {
+  const userRef = useRef();
+  const errRef = useRef();
 
   const navigate = useNavigate();
-  const {user, pwd, setValidMatch, setValidName, setValidPwd, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd, userRef, errRef, } = OnRegisterContext;
+  const {user, pwd, success, setValidMatch, setValidName, setValidPwd, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd, validPwd, validMatch, validName, pwdFocus, setpwdFocus} = OnRegisterContext;
 
 //////// userefy called when application .
 
 
 useEffect(() => {
-    userRef.current.focus;
+    userRef?.current.focus();
 }, []);
 
 useEffect(() => {
-    setValidName(PWD_REGEX.test(user));
+    setValidName(USER_REGEX.test(user));
 }, [user]);
-   
+   // reference comparism for password and match-passwords state
 useEffect(() => {
-  setValidMatch(PWD_REGEX.test(pwd));
-  setValidPwd(pwd === matchPwd);
+  setValidPwd(PWD_REGEX.test(pwd));
+  setValidMatch(pwd === matchPwd);
 }, [pwd, matchPwd]);
 
 // when the application mounts the error should be set to an empty string
 useEffect(() => {
  setErrMsg("");
-}, []);
+}, [user , pwd, matchPwd]);
 
 
   const responseGoogle = (response) => {
@@ -73,14 +75,14 @@ useEffect(() => {
 
               {/* Form */}
               <div className="max-w-sm mx-auto">
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label
                         className="block text-gray-800 text-[14px] md:text-[17px] lg:text-sm font-medium mb-1"
                         htmlFor="name"
                       >
-                        Name <span className="text-red-600">*</span>
+                        Name {success ? <span className="text-red-600">*</span> : ""}<span className="text-red-600">error*</span>
                       </label>
                       <input
                         id="name"
@@ -88,6 +90,13 @@ useEffect(() => {
                         className="form-input w-full text-gray-800 rounded-full px-1 py-2 lg:px-4 lg:py-3 placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center border-red-900" 
                         placeholder="Enter your name"
                         required
+                        onChange={(event) => event.target.value}
+                        aria-invalid={validPwd ? "false" : "true"}
+                        aria-describedby = "pwdnote"
+                        onFocus={() => setpwdFocus(true)}
+                        onBlur={() => setpwdFocus(false)}
+                        value={user}
+
                       />
                     </div>
                   </div>
@@ -127,7 +136,7 @@ useEffect(() => {
                   </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full text-[14px] md:text-[17px] lg:text-sm rounded-full">
+                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full text-[14px] md:text-[17px] lg:text-sm rounded-full" disabled={!validName || !validPwd || !validMatch ? true : false}>
                         Sign up
                       </button>
                     </div>

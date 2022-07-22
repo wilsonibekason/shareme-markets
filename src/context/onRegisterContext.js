@@ -24,14 +24,14 @@ const [userFocus, setUserFocus] = useState(false);
 
 const [pwd, setPwd] = useState('');
 const [validPwd, setValidPwd] = useState(false);
-const [pwdFocus, setpwdFocu] = useState(false);
+const [pwdFocus, setpwdFocus] = useState(false);
 
 const [matchPwd, setMatchPwd] = useState('');
 const [validMatch, setValidMatch] = useState(false);
 const [matchFocus, setMatchFocus] = useState(false);
 
 const [errMsg, setErrMsg] = useState('');
-const [success, setSuccess] = useState(false);
+const [success, setSuccess] = useState(true);
 
 // routers navigation
 const navigate = useNavigate();
@@ -115,7 +115,7 @@ try {
      });
    }
        return(
-        <Context.Provider value={{user, pwd, setValidMatch, setValidName, setValidPwd, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd ,responseGoogle, GoogleLogin, success, userRef,  errRef}}>
+        <Context.Provider value={{user, pwd, setValidMatch, setValidName, setValidPwd, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd ,responseGoogle, GoogleLogin, success, userRef,  errRef, validPwd, validMatch, validName, setpwdFocus, pwdFocus}}>
            {children}
         </Context.Provider>
        )
