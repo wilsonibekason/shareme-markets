@@ -115,7 +115,7 @@ try {
      });
    }
        return(
-        <Context.Provider value={{user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd ,responseGoogle, GoogleLogin}}>
+        <Context.Provider value={{user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd ,responseGoogle, GoogleLogin, success}}>
            {children}
         </Context.Provider>
        )
