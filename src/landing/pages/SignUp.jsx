@@ -1,12 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import { OnRegisterContext } from "../../context/onRegisterContext";
 
 import Header from "../partials/Header";
+import { client } from "../../client";
 
 function SignUp() {
-  const {user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd, responseGoogle} = OnRegisterContext;
+
+  const navigate = useNavigate();
+  const {user, pwd, setValidMatch, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd, } = OnRegisterContext;
+
+
+   
+  const responseGoogle = (response) => {
+
+
+    console.log(response);
+    console.log("====================================");
+    console.log(response?.error);
+    console.log("====================================");
+    localStorage.setItem("user", JSON.stringify(response?.profileObj));
+    const { name, googleId, imageUrl } = response?.profileObj;
+    const doc = {
+      _id: googleId,
+      _type: "user",
+      userName: name,
+      image: imageUrl,
+    };
+    client.createIfNotExists(doc).then(() => {
+      navigate("/signin", { replace: true });
+    });
+  }
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Site header */}

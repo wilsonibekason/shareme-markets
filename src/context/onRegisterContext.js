@@ -33,6 +33,8 @@ const [matchFocus, setMatchFocus] = useState(false);
 const [errMsg, setErrMsg] = useState('');
 const [success, setSuccess] = useState(false);
 
+// routers navigation
+const navigate = useNavigate();
 
 useEffect(() => {
    userRef.current.focus();
@@ -94,7 +96,7 @@ try {
   // Google Auth registration code 
   // initalise navigate as Hook
 
-   const navigate = useNavigate();
+  
    const responseGoogle = (response) => {
      console.log(response);
      console.log("====================================");
@@ -109,7 +111,7 @@ try {
        image: imageUrl,
      };
      client.createIfNotExists(doc).then(() => {
-       navigate("/signin", { replace: true });
+       navigate("/", { replace: true });
      });
    }
        return(
