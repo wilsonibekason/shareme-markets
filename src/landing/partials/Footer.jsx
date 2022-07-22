@@ -40,7 +40,7 @@ function Footer() {
             <h6 className="text-gray-800 font-medium mb-2">Products</h6>
             <ul className="text-[14px] md:text-[17px] lg:text-sm">
               {productSection.map((SECTION, index) => (
-                 <li className="mb-2">
+                 <li className="mb-2" key={index}>
                  <Link
                    to="#"
                    className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
@@ -59,7 +59,7 @@ function Footer() {
             <h6 className="text-gray-800 font-medium mb-2">Resources</h6>
             <ul className="text-[14px] md:text-[17px] lg:text-sm">
               {companySection.map((SECTION, index) => (
-                 <li className="mb-2">
+                 <li className="mb-2"  key={index}>
                  <Link
                    to="#"
                    className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" key={index}
