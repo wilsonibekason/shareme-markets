@@ -23,4 +23,4 @@ Every information which is represented by an image or a short video can be brows
 The project is still under development, some features like the short videos is yet to be integrated. 
 What i need is for more people to log in to the application, add new pictures, observe the website, and send me feedback and advice based on your experience on the application, i would gladly respond to you.
 This entire application was built with the SERN stack (Sanity CMS, Expressjs, React, and Nodejs).
-The application was designed with tailwind css. The backend was fully built with Node and Expressjs, and i used sanity cms for the database
+The application was designed with tailwind css. The backend was fully built with Node and Expressjs, and i used sanity cms for the database.
