@@ -8,16 +8,15 @@ import { OnRegisterContext } from "../../context/onRegisterContext";
 
 import Header from "../partials/Header";
 import { client } from "../../client";
-import { values } from "lodash";
 
 
 // defining dynamic styles for login validations and error handling on bad user authentication  and authorization 
 function SignUp() {
-  const userRef = useRef();
-  const errRef = useRef();
-
+ 
+  const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
+  const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
   const navigate = useNavigate();
-  const {user, pwd, success, setValidMatch, setValidName, setValidPwd, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd, validPwd, validMatch, validName, pwdFocus, setpwdFocus} = OnRegisterContext;
+
 
 //////// userefy called when application .
 
@@ -108,6 +107,15 @@ function SignUp() {
                   
                       errors.email = 'Invalid email address';
                   
+                    } else if(
+                      !USER_REGEX.test(values.user)
+                    ) {
+                      errors.user = "Name length must be at least 8";
+                    }
+                     else if(
+                      !PWD_REGEX.test(values.password)
+                    ) {
+                      errors.password = "Must include uppercase and lowercase letters, a number and a special character";
                     }
                   
                     return errors;
@@ -154,24 +162,16 @@ function SignUp() {
                         Name <span className="text-red-600">*</span>
                       </label>
                       <input
-                        id="name"
-                      
-                        className="form-input w-full text-gray-800 rounded-full px-1 py-2 lg:px-4 lg:py-3 placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center border-red-900" 
-                        placeholder="Enter your name"
-                        required
-                        type="password"
-
-                        name="password"
-                  
-                        onChange={handleChange}
-                  
+                        id="user"
+                        type="text"
+                        name="user"                                    onChange={handleChange}
                         onBlur={handleBlur}
-                  
                         value={values.user}
-                   
-
-                      />
-                          {errors.email && touched.email && errors.email}
+                        className={`${errors.user && touched.user && errors.user ? "border-rose-900" : ""}form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3 ` }
+                        placeholder="Enter your full name"
+                        required
+                      /> 
+                          {errors.user && touched.user && errors.user}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
@@ -180,18 +180,15 @@ function SignUp() {
                         className="block text-gray-800 text-[14px] md:text-[17px] lg:text-smfont-medium mb-1"
                         htmlFor="email"
                       >
-                        Email <span className="text-red-600">*</span>
+                        Email <span className="text-red-600 ">*</span>
                       </label>
                       <input
                         id="email"
                         type="email"
-                        name="email"
-                          onChange={handleChange}
- 
-                         onBlur={handleBlur}
-
+                        name="email"                                    onChange={handleChange}
+                        onBlur={handleBlur}
                         value={values.email}
-                        className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3 "
+                        className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3"
                         placeholder="Enter your email address"
                         required
                       /> 
@@ -201,7 +198,7 @@ function SignUp() {
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label
-                        className="block text-gray-800 text-[14px] md:text-[17px] lg:text-sm font-medium mb-1"
+                        className="block text-gray-800 text-[14px] md:text-[17px] lg:text-sm font-medium mb-1 "
                         htmlFor="password"
                       >
                         Password <span className="text-red-600">*</span>
@@ -209,13 +206,9 @@ function SignUp() {
                       <input
                         id="password"
                         type="password"
-
-                        name="password"
-                  
-                        onChange={handleChange}
-                  
-                        onBlur={handleBlur}
-                  
+                        name="password"               
+                        onChange={handleChange}                 
+                        onBlur={handleBlur}                  
                         value={values.password}
                         className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3 "
                         placeholder="Enter your password"
