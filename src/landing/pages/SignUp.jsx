@@ -15,6 +15,7 @@ function SignUp() {
  
   const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
   const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+  const REGISTER_URL = '/register';
   const navigate = useNavigate();
 
 
@@ -67,7 +68,7 @@ function SignUp() {
               <Formik
                   initialValues={{
                     user: "",
-                    password:"",
+                    pwd:"",
                     email: '',
                     acceptedTerms: false, // added for our checkbox
                     jobType: '', // added for our select
@@ -114,7 +115,7 @@ function SignUp() {
                     }
                      else if(
                       !PWD_REGEX.test(values.password)
-                    ) {
+                    ) { 
                       errors.password = "Must include uppercase and lowercase letters, a number and a special character";
                     }
                   
