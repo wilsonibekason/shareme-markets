@@ -167,7 +167,7 @@ function SignUp() {
                   
                         onBlur={handleBlur}
                   
-                        value={values.password}
+                        value={values.user}
                    
 
                       />
@@ -186,7 +186,6 @@ function SignUp() {
                         id="email"
                         type="email"
                         name="email"
-
                           onChange={handleChange}
  
                          onBlur={handleBlur}
@@ -195,7 +194,7 @@ function SignUp() {
                         className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3 "
                         placeholder="Enter your email address"
                         required
-                      />
+                      /> 
                           {errors.email && touched.email && errors.email}
                     </div>
                   </div>
