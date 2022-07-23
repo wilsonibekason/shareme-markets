@@ -1,10 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import GoogleLogin from "react-google-login";
+import {Formik, useField, Form} from 'formik';
+import * as Yup from 'yup';
+
 import { OnRegisterContext } from "../../context/onRegisterContext";
 
 import Header from "../partials/Header";
 import { client } from "../../client";
+import { values } from "lodash";
 
 
 // defining dynamic styles for login validations and error handling on bad user authentication  and authorization 
@@ -16,25 +20,6 @@ function SignUp() {
   const {user, pwd, success, setValidMatch, setValidName, setValidPwd, setErrMsg, setMatchPwd, handleSubmit, PWD_REGEX, USER_REGEX, matchPwd, validPwd, validMatch, validName, pwdFocus, setpwdFocus} = OnRegisterContext;
 
 //////// userefy called when application .
-
-
-useEffect(() => {
-    userRef?.current.focus();
-}, []);
-
-useEffect(() => {
-    setValidName(USER_REGEX.test(user));
-}, [user]);
-   // reference comparism for password and match-passwords state
-useEffect(() => {
-  setValidPwd(PWD_REGEX.test(pwd));
-  setValidMatch(pwd === matchPwd);
-}, [pwd, matchPwd]);
-
-// when the application mounts the error should be set to an empty string
-useEffect(() => {
- setErrMsg("");
-}, [user , pwd, matchPwd]);
 
 
   const responseGoogle = (response) => {
@@ -73,8 +58,92 @@ useEffect(() => {
                 </h1>
               </div>
 
+              
+                
+                  
               {/* Form */}
               <div className="max-w-sm mx-auto">
+
+
+              <Formik
+                  initialValues={{
+                    user: "",
+                    password:"",
+                    email: '',
+                    acceptedTerms: false, // added for our checkbox
+                    jobType: '', // added for our select
+                   }}
+                   validationSchema={Yup.object({
+                    user: Yup.string()
+            .max(15, 'Must be 15 characters or less')
+            .required('Required'),
+         
+          email: Yup.string()
+            .email('Invalid email address')
+            .required('Required'),
+          pwd: Yup.string().required('Password is required'),
+          acceptedTerms: Yup.boolean()
+            .required('Required')
+            .oneOf([true], 'You must accept the terms and conditions.'),
+          jobType: Yup.string()
+            .oneOf(
+              ['designer', 'development', 'product', 'other'],
+              'Invalid Job Type'
+            )
+            .required('Required'),
+                   })}
+                   validate={values => {
+
+                    const errors = {};
+                  
+                    if (!values.email) {
+                  
+                      errors.email = 'Required';
+                  
+                    } else if (
+                  
+                      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                  
+                    ) {
+                  
+                      errors.email = 'Invalid email address';
+                  
+                    }
+                  
+                    return errors;
+                  
+                  }}
+
+                   onSubmit={  (values, {setSubmitting}) => {
+              
+                    try {
+                      
+                    } catch (error) {
+                      
+                    }
+                    setTimeout(() => {
+                      alert(JSON.stringify(values, null, 2));
+                      setSubmitting(false);
+                    }, 400);
+                  }}
+
+                   >
+                   {({
+                  values,
+
+                  errors,
+                
+                  touched,
+                
+                  handleChange,
+                
+                  handleBlur,
+                
+                  handleSubmit,
+                
+                  isSubmitting,
+                   }) => (
+                    <>
                 <form onSubmit={handleSubmit}>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
@@ -82,22 +151,27 @@ useEffect(() => {
                         className="block text-gray-800 text-[14px] md:text-[17px] lg:text-sm font-medium mb-1"
                         htmlFor="name"
                       >
-                        Name {success ? <span className="text-red-600">*</span> : ""}<span className="text-red-600">error*</span>
+                        Name <span className="text-red-600">*</span>
                       </label>
                       <input
                         id="name"
-                        type="text"
+                      
                         className="form-input w-full text-gray-800 rounded-full px-1 py-2 lg:px-4 lg:py-3 placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center border-red-900" 
                         placeholder="Enter your name"
                         required
-                        onChange={(event) => event.target.value}
-                        aria-invalid={validPwd ? "false" : "true"}
-                        aria-describedby = "pwdnote"
-                        onFocus={() => setpwdFocus(true)}
-                        onBlur={() => setpwdFocus(false)}
-                        value={user}
+                        type="password"
+
+                        name="password"
+                  
+                        onChange={handleChange}
+                  
+                        onBlur={handleBlur}
+                  
+                        value={values.password}
+                   
 
                       />
+                          {errors.email && touched.email && errors.email}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
@@ -111,10 +185,18 @@ useEffect(() => {
                       <input
                         id="email"
                         type="email"
+                        name="email"
+
+                          onChange={handleChange}
+ 
+                         onBlur={handleBlur}
+
+                        value={values.email}
                         className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3 "
                         placeholder="Enter your email address"
                         required
                       />
+                          {errors.email && touched.email && errors.email}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
@@ -128,15 +210,24 @@ useEffect(() => {
                       <input
                         id="password"
                         type="password"
+
+                        name="password"
+                  
+                        onChange={handleChange}
+                  
+                        onBlur={handleBlur}
+                  
+                        value={values.password}
                         className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3 "
                         placeholder="Enter your password"
                         required
                       />
+                      {errors.password && touched.password && errors.password}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full text-[14px] md:text-[17px] lg:text-sm rounded-full" disabled={!validName || !validPwd || !validMatch ? true : false}>
+                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full text-[14px] md:text-[17px] lg:text-sm rounded-full" disabled={isSubmitting}>
                         Sign up
                       </button>
                     </div>
@@ -153,6 +244,9 @@ useEffect(() => {
                     .
                   </div>
                 </form>
+                </>
+                     )}
+                 </Formik>
                 <div className="flex items-center my-6">
                   <div
                     className="border-t border-gray-300 flex-grow mr-3"
@@ -165,7 +259,7 @@ useEffect(() => {
                   ></div>
                 </div>
                 <form>
-                 
+              
                 <div className="flex flex-wrap -mx-3">
                     <div className="w-full px-3">
                       <GoogleLogin
