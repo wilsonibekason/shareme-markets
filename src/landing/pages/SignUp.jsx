@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import {Formik, useField, Form} from 'formik';
@@ -8,17 +8,18 @@ import { OnRegisterContext } from "../../context/onRegisterContext";
 
 import Header from "../partials/Header";
 import { client } from "../../client";
+import axios from '../../api/baseApi';
 
 
 // defining dynamic styles for login validations and error handling on bad user authentication  and authorization 
 function SignUp() {
  
-  const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
+  const USER_REGEX = /^[A-z][A-z0-9-_]{10,23}$/;
   const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
   const REGISTER_URL = '/register';
   const navigate = useNavigate();
 
-
+  const [errMsg, setErrMsg] = useState('');
 //////// userefy called when application .
 
 
@@ -60,38 +61,18 @@ function SignUp() {
 
               
                 
-                  
+              
               {/* Form */}
               <div className="max-w-sm mx-auto">
 
 
               <Formik
                   initialValues={{
-                    user: "",
-                    pwd:"",
+                    user: "",          
                     email: '',
-                    acceptedTerms: false, // added for our checkbox
-                    jobType: '', // added for our select
+                    pwd:  '',
                    }}
-                   validationSchema={Yup.object({
-                    user: Yup.string()
-            .max(15, 'Must be 15 characters or less')
-            .required('Required'),
-         
-          email: Yup.string()
-            .email('Invalid email address')
-            .required('Required'),
-          pwd: Yup.string().required('Password is required'),
-          acceptedTerms: Yup.boolean()
-            .required('Required')
-            .oneOf([true], 'You must accept the terms and conditions.'),
-          jobType: Yup.string()
-            .oneOf(
-              ['designer', 'development', 'product', 'other'],
-              'Invalid Job Type'
-            )
-            .required('Required'),
-                   })}
+   
                    validate={values => {
 
                     const errors = {};
@@ -114,26 +95,63 @@ function SignUp() {
                       errors.user = "Name length must be at least 8";
                     }
                      else if(
-                      !PWD_REGEX.test(values.password)
+                      !PWD_REGEX.test(values.pwd)
                     ) { 
-                      errors.password = "Must include uppercase and lowercase letters, a number and a special character";
+                      errors.pwd = "Must include uppercase and lowercase letters, a number and a special character";
                     }
                   
                     return errors;
                   
                   }}
 
-                   onSubmit={  (values, {setSubmitting}) => {
-              
+                   onSubmit= { async ( {user, email, pwd}, {setSubmitting}, ) => {
+                    
+                     const v1 = USER_REGEX.test(user);
+                     const v2 = PWD_REGEX.test(pwd);
+
+                   /// comparing
+                   if(!v1 || !v2){
+                    setErrMsg("invalid entry");
+                       return;
+                                 };
                     try {
-                      
-                    } catch (error) {
-                      
-                    }
-                    setTimeout(() => {
-                      alert(JSON.stringify(values, null, 2));
+                      const response = await axios.post(
+                        REGISTER_URL,
+                        { user, email, pwd},
+                        {
+                          headers: { "Content-Type": "application/json" },
+                          withCredientials: true,
+                        }
+                      );
+                      console.log(JSON.stringify(response?.data));
+                      //console.log(JSON.stringify(response));
+                      const accessToken = response?.data?.accessToken;
+                      const roles = response?.data?.roles;
+                      console.log("====================================");
+                      console.log(accessToken);
+                      console.log(roles);
+                      console.log("====================================");
+                      navigate('/signin', { replace: true });
                       setSubmitting(false);
-                    }, 400);
+                    } catch (err) {
+                      console.log(err);
+                      console.log(err?.response?.data?.message);
+                      if (!err?.response) {
+                        console.log(err?.response?.data?.message);
+                        setErrMsg("No Server Response");
+                      } else if (err.response?.status === 400) {
+                        setErrMsg("Username, email and password are required.");
+                        
+                      } else if (err.response?.status === 401) {
+                        setErrMsg("Unauthorized");
+                      } else if(err?.response?.status === 409){
+                        setErrMsg("username has already been registered");
+                     }
+                      else {
+                        setErrMsg("Login Failed");
+                      }
+                    }
+                
                   }}
 
                    >
@@ -156,6 +174,7 @@ function SignUp() {
                 <form onSubmit={handleSubmit}>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
+                    {errMsg}
                       <label
                         className="block text-gray-800 text-[14px] md:text-[17px] lg:text-sm font-medium mb-1"
                         htmlFor="name"
@@ -169,7 +188,6 @@ function SignUp() {
                         onBlur={handleBlur}
                         value={values.user}
                         className={`${errors.user && touched.user && errors.user ? "border-rose-900" : ""}form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3 ` }
-                        placeholder="Enter your full name"
                         required
                       /> 
                           {errors.user && touched.user && errors.user}
@@ -200,27 +218,27 @@ function SignUp() {
                     <div className="w-full px-3">
                       <label
                         className="block text-gray-800 text-[14px] md:text-[17px] lg:text-sm font-medium mb-1 "
-                        htmlFor="password"
+                        htmlFor="pwd"
                       >
-                        Password <span className="text-red-600">*</span>
+                        password <span className="text-red-600">*</span>
                       </label>
                       <input
-                        id="password"
+                        id="pwd"
                         type="password"
-                        name="password"               
-                        onChange={handleChange}                 
-                        onBlur={handleBlur}                  
-                        value={values.password}
-                        className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3 "
-                        placeholder="Enter your password"
+                        name="pwd"                                   
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.pwd}
+                        className="form-input w-full text-gray-800 rounded-full placeholder:text-[14px] md:placeholder:text-[17px] lg:placeholder:text-sm  placeholder:text-center px-1 py-2 lg:px-4 lg:py-3"
+                        placeholder="Enter your pwd"
                         required
-                      />
-                      {errors.password && touched.password && errors.password}
+                        />
+                      {errors.pwd && touched.pwd && errors.pwd}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full text-[14px] md:text-[17px] lg:text-sm rounded-full" disabled={isSubmitting}>
+                      <button type='submit' className="btn text-white bg-blue-600 hover:bg-blue-700 w-full text-[14px] md:text-[17px] lg:text-sm rounded-full" disabled={isSubmitting}>
                         Sign up
                       </button>
                     </div>
