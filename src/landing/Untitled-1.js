@@ -473,3 +473,23 @@ const SignupForm = () => {
     </>
   );
 };
+
+       //          validationSchema={Yup.object({
+          //           user: Yup.string()
+          //   .max(15, 'Must be 15 characters or less')
+          //   .required('Required'),
+         
+          // email: Yup.string()
+          //   .email('Invalid email address')
+          //   .required('Required'),
+          // pwd: Yup.string().required('pwd is required'),
+          // acceptedTerms: Yup.boolean()
+          //   .required('Required')
+          //   .oneOf([true], 'You must accept the terms and conditions.'),
+          // jobType: Yup.string()
+          //   .oneOf(
+          //     ['designer', 'development', 'product', 'other'],
+          //     'Invalid Job Type'
+          //   )
+          //   .required('Required'), {"user": "trust","email": "wilsonibekason@gmail.com" ,"pwd": "wanbekcom111"}
+          //          })}

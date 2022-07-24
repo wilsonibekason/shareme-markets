@@ -53,7 +53,7 @@ useEffect(() =>{
 // / creating the handle submit form
 const handleSubmit = async (e) => {
 e.preventDefault();
-/// if buttton is enabled with JS hack
+/// if buttton is enabled with JS hack 
 const v1 = USER_REGEX.test(user);
 const v2 = PWD_REGEX.test(pwd);
 
